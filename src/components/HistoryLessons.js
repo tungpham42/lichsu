@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container, Row, Col, Card, Button, Modal } from "react-bootstrap";
+import { Row, Col, Card, Button, Modal } from "react-bootstrap";
 import lessons from "../data/lessons.json";
 
 function HistoryLessons() {
@@ -13,7 +13,7 @@ function HistoryLessons() {
   };
 
   return (
-    <Container className="mt-4">
+    <>
       <h2 className="mb-4">Bài Học Lịch Sử</h2>
       <Row>
         {lessons.map((lesson) => (
@@ -63,7 +63,7 @@ function HistoryLessons() {
           </Modal.Footer>
         </Modal>
       )}
-    </Container>
+    </>
   );
 }
 

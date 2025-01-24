@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Container, Button, Card, Alert } from "react-bootstrap";
+import { Button, Card, Alert } from "react-bootstrap";
 import questionsData from "../data/questions.json";
 
 const Quiz = () => {
@@ -39,7 +39,7 @@ const Quiz = () => {
   };
 
   return (
-    <Container className="mt-4">
+    <>
       {showResult ? (
         <Card>
           <Card.Body>
@@ -97,7 +97,7 @@ const Quiz = () => {
           </Card>
         )
       )}
-    </Container>
+    </>
   );
 };
 
