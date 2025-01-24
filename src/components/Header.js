@@ -6,7 +6,12 @@ const Header = () => {
   const location = useLocation();
 
   return (
-    <Navbar className="ps-3 fixed-top" bg="danger" variant="dark" expand="lg">
+    <Navbar
+      className="ps-3 fixed-top shadow-lg"
+      bg="danger"
+      variant="dark"
+      expand="lg"
+    >
       <Navbar.Brand as={Link} to="/">
         Lịch Sử Việt Nam
       </Navbar.Brand>
