@@ -1,33 +1,48 @@
 import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
   const location = useLocation();
+
   return (
     <Navbar className="ps-3" bg="dark" variant="dark" expand="lg">
-      <Navbar.Brand href="/">Lịch Sử Việt Nam</Navbar.Brand>
+      <Navbar.Brand as={Link} to="/">
+        Lịch Sử Việt Nam
+      </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto">
-          <Nav.Link
-            className={location.pathname === "/" ? "active" : ""}
-            href="/"
-          >
-            Trang Chủ
-          </Nav.Link>
-          <Nav.Link
-            className={location.pathname === "/bai-hoc" ? "active" : ""}
-            href="/bai-hoc"
-          >
-            Bài Học
-          </Nav.Link>
-          <Nav.Link
-            className={location.pathname === "/cau-do" ? "active" : ""}
-            href="/cau-do"
-          >
-            Câu Đố
-          </Nav.Link>
+          <Nav.Item>
+            <Link
+              className={`nav-link ${
+                location.pathname === "/" ? "active" : ""
+              }`}
+              to="/"
+            >
+              Trang Chủ
+            </Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Link
+              className={`nav-link ${
+                location.pathname === "/bai-hoc" ? "active" : ""
+              }`}
+              to="/bai-hoc"
+            >
+              Bài Học
+            </Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Link
+              className={`nav-link ${
+                location.pathname === "/cau-do" ? "active" : ""
+              }`}
+              to="/cau-do"
+            >
+              Câu Đố
+            </Link>
+          </Nav.Item>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
