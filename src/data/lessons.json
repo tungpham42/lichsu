@@ -14,7 +14,9 @@
         "name": "Vua Hùng",
         "role": "Người sáng lập và cai trị nước Văn Lang"
       }
-    ]
+    ],
+    "youtube_id": "nGDnoy9cuQw",
+    "start_time": 55
   },
   {
     "id": 2,
@@ -31,7 +33,9 @@
         "name": "An Dương Vương",
         "role": "Người sáng lập nước Âu Lạc"
       }
-    ]
+    ],
+    "youtube_id": "nGDnoy9cuQw",
+    "start_time": 283
   },
   {
     "id": 3,
@@ -47,7 +51,9 @@
         "name": "Hai Bà Trưng",
         "role": "Lãnh đạo cuộc khởi nghĩa chống nhà Hán"
       }
-    ]
+    ],
+    "youtube_id": "lOeq8pMtMsc",
+    "start_time": 0
   },
   {
     "id": 4,
@@ -64,7 +70,9 @@
         "name": "Lý Bí",
         "role": "Người sáng lập nước Vạn Xuân"
       }
-    ]
+    ],
+    "youtube_id": "lOeq8pMtMsc",
+    "start_time": 362
   },
   {
     "id": 5,
@@ -81,7 +89,9 @@
         "name": "Phùng Hưng",
         "role": "Lãnh đạo khởi nghĩa chống nhà Tùy"
       }
-    ]
+    ],
+    "youtube_id": "lOeq8pMtMsc",
+    "start_time": 1240
   },
   {
     "id": 6,
@@ -101,7 +111,9 @@
         "name": "Dương Đình Nghệ",
         "role": "Người lãnh đạo chống nhà Tống"
       }
-    ]
+    ],
+    "youtube_id": "lOeq8pMtMsc",
+    "start_time": 1473
   },
   {
     "id": 7,
@@ -116,7 +128,9 @@
         "name": "Ngô Quyền",
         "role": "Người lập nên nhà Ngô và chiến thắng Bạch Đằng"
       }
-    ]
+    ],
+    "youtube_id": "lOeq8pMtMsc",
+    "start_time": 1740
   },
   {
     "id": 8,
@@ -129,7 +143,9 @@
         "name": "Đinh Tiên Hoàng",
         "role": "Hoàng đế đầu tiên của Đại Cồ Việt"
       }
-    ]
+    ],
+    "youtube_id": "0TrD-u9ilfQ",
+    "start_time": 0
   },
   {
     "id": 9,
@@ -142,7 +158,9 @@
         "name": "Lê Đại Hành",
         "role": "Người lãnh đạo chống nhà Tống"
       }
-    ]
+    ],
+    "youtube_id": "T3ewSJCiKSM",
+    "start_time": 0
   },
   {
     "id": 10,
@@ -163,7 +181,9 @@
         "name": "Lý Thường Kiệt",
         "role": "Vị tướng nổi tiếng với cuộc kháng chiến chống Tống"
       }
-    ]
+    ],
+    "youtube_id": "qSWs47TuWyc",
+    "start_time": 0
   },
   {
     "id": 11,
@@ -184,7 +204,9 @@
         "name": "Trần Nhân Tông",
         "role": "Vua và nhà tư tưởng nổi tiếng thời Trần"
       }
-    ]
+    ],
+    "youtube_id": "OhDpiE48Jkk",
+    "start_time": 0
   },
   {
     "id": 12,
@@ -205,11 +227,13 @@
         "name": "Lê Lợi",
         "role": "Người lãnh đạo khởi nghĩa Lam Sơn"
       }
-    ]
+    ],
+    "youtube_id": "QPwbQUZRMFo",
+    "start_time": 0
   },
   {
     "id": 13,
-    "title": "Thời kỳ nhà Lê sơ",
+    "title": "Thời kỳ nhà Lê Sơ",
     "description": "Thời kỳ độc lập, phát triển văn hóa và pháp luật dưới triều Lê.",
     "period": "1428 - 1527",
     "events": [
@@ -226,94 +250,179 @@
         "name": "Lê Thánh Tông",
         "role": "Vị vua nổi tiếng với cải cách và phát triển văn hóa"
       }
-    ]
+    ],
+    "youtube_id": "zn5UmGXLYaQ",
+    "start_time": 0
   },
   {
     "id": 14,
+    "title": "Thời kỳ nhà Mạc",
+    "description": "Thời kỳ nhà Mạc do Mạc Đăng Dung sáng lập, kéo dài gần 65 năm và đối đầu với các cuộc chiến tranh Lê - Mạc.",
+    "period": "1527 - 1592",
+    "events": [
+      "Mạc Đăng Dung lật đổ nhà Lê, lập nhà Mạc (1527)",
+      "Chiến tranh Lê - Mạc kéo dài nhiều thập kỷ (1533 - 1592)"
+    ],
+    "important_figures": [
+      {
+        "name": "Mạc Đăng Dung",
+        "role": "Người sáng lập triều đại nhà Mạc"
+      },
+      {
+        "name": "Mạc Kính Điển",
+        "role": "Danh tướng nhà Mạc, chỉ huy các cuộc chiến chống nhà Lê"
+      }
+    ],
+    "youtube_id": "RjCWU2RDEh4",
+    "start_time": 15699
+  },
+  {
+    "id": 15,
+    "title": "Thời kỳ Nhà Lê Trung Hưng (vua Lê - chúa Trịnh)",
+    "description": "Thời kỳ Nhà Lê Trung Hưng, bắt đầu từ khi nhà Lê được khôi phục dưới sự hỗ trợ của các chúa Trịnh. Đây là thời kỳ phân quyền với vua Lê mang tính tượng trưng, quyền lực nằm trong tay chúa Trịnh.",
+    "period": "1533 - 1789",
+    "events": [
+      "Nhà Lê được khôi phục tại Thanh Hóa (1533)",
+      "Cuộc chiến Trịnh - Nguyễn phân tranh (1627 - 1672)",
+      "Kinh thành Thăng Long trở thành trung tâm quyền lực của chúa Trịnh"
+    ],
+    "important_figures": [
+      {
+        "name": "Lê Trang Tông",
+        "role": "Vua đầu tiên của thời kỳ Nhà Lê Trung Hưng"
+      },
+      {
+        "name": "Trịnh Tùng",
+        "role": "Chúa Trịnh đầu tiên nắm quyền chính"
+      },
+      {
+        "name": "Trịnh Căn",
+        "role": "Một trong những chúa Trịnh kiệt xuất trong việc củng cố quyền lực"
+      }
+    ],
+    "youtube_id": "RjCWU2RDEh4",
+    "start_time": 17708
+  },
+  {
+    "id": 16,
+    "title": "Thời kỳ Chúa Nguyễn",
+    "description": "Thời kỳ Chúa Nguyễn bắt đầu từ khi Nguyễn Hoàng được cử vào trấn thủ Thuận Hóa, mở ra thời kỳ các chúa Nguyễn xây dựng và phát triển Đàng Trong, đặt nền móng cho sự hình thành của nhà Nguyễn sau này.",
+    "period": "1558 - 1802",
+    "events": [
+      "Nguyễn Hoàng vào trấn thủ Thuận Hóa (1558)",
+      "Mở rộng lãnh thổ về phía Nam, khai phá miền đất mới",
+      "Cuộc chiến Trịnh - Nguyễn phân tranh (1627 - 1672)",
+      "Sụp đổ của dòng chúa Nguyễn dưới tay nhà Tây Sơn (1777)",
+      "Thành lập nhà Nguyễn (1802)"
+    ],
+    "important_figures": [
+      {
+        "name": "Nguyễn Hoàng",
+        "role": "Chúa Nguyễn đầu tiên, người đặt nền móng cho Đàng Trong"
+      },
+      {
+        "name": "Nguyễn Phúc Tần",
+        "role": "Chúa Nguyễn có công lớn trong việc khai phá miền Nam"
+      },
+      {
+        "name": "Nguyễn Phúc Thuần",
+        "role": "Chúa Nguyễn cuối cùng, thất bại trước nhà Tây Sơn"
+      }
+    ],
+    "youtube_id": "Swuumiw0hq4",
+    "start_time": 0
+  },
+  {
+    "id": 17,
     "title": "Thời kỳ Tây Sơn",
-    "description": "Thời kỳ của phong trào Tây Sơn, nổi bật với ba anh em Nguyễn Nhạc, Nguyễn Lữ, và Nguyễn Huệ chống lại sự thống trị của nhà Nguyễn và phong trào phản kháng triều đình.",
+    "description": "Thời kỳ của phong trào khởi nghĩa Tây Sơn và chiến thắng trước quân Thanh.",
     "period": "1771 - 1802",
     "events": [
-      "Khởi nghĩa Tây Sơn (1771)",
-      "Nguyễn Huệ đánh bại quân Xiêm và quân Thanh (1785, 1789)",
-      "Lập nhà Tây Sơn (1788)"
+      "Nguyễn Huệ đánh bại quân Xiêm tại Rạch Gầm - Xoài Mút (1785)",
+      "Chiến thắng Ngọc Hồi - Đống Đa chống quân Thanh (1789)"
     ],
     "important_figures": [
       {
         "name": "Nguyễn Huệ (Quang Trung)",
-        "role": "Vị anh hùng trong cuộc khởi nghĩa Tây Sơn và người sáng lập triều đại nhà Nguyễn"
-      },
-      {
-        "name": "Nguyễn Nhạc",
-        "role": "Một trong ba anh em lãnh đạo phong trào Tây Sơn"
+        "role": "Lãnh đạo phong trào Tây Sơn và hoàng đế Đại Việt"
       }
-    ]
+    ],
+    "youtube_id": "x3lnii_J9jk",
+    "start_time": 0
   },
   {
-    "id": 15,
-    "title": "Thời nhà Nguyễn",
-    "description": "Thời kỳ của triều đại Nguyễn, gắn liền với việc thống nhất đất nước và các cuộc chiến tranh xâm lược từ phương Tây.",
+    "id": 18,
+    "title": "Thời kỳ nhà Nguyễn",
+    "description": "Triều đại cuối cùng của Việt Nam, gắn liền với thời kỳ thực dân Pháp xâm lược.",
     "period": "1802 - 1945",
     "events": [
-      "Nguyễn Ánh lên ngôi, lập nhà Nguyễn (1802)",
-      "Các cuộc chiến tranh với Pháp và các nước phương Tây (1858 - 1884)",
-      "Cải cách, văn hóa và giáo dục dưới triều Nguyễn"
+      "Nguyễn Ánh thống nhất đất nước, lập nhà Nguyễn (1802)",
+      "Pháp xâm lược Việt Nam (1858)",
+      "Phong trào Cần Vương chống Pháp (1885 - 1896)"
     ],
     "important_figures": [
       {
-        "name": "Nguyễn Ánh (Gia Long)",
-        "role": "Người sáng lập triều Nguyễn"
+        "name": "Gia Long (Nguyễn Ánh)",
+        "role": "Người sáng lập nhà Nguyễn"
       },
       {
-        "name": "Tự Đức",
-        "role": "Vị vua trong thời kỳ cuối triều Nguyễn"
+        "name": "Tôn Thất Thuyết",
+        "role": "Lãnh đạo phong trào Cần Vương"
       }
-    ]
+    ],
+    "youtube_id": "96SVntYMrPk",
+    "start_time": 0
   },
   {
-    "id": 16,
-    "title": "Thời Pháp thuộc",
-    "description": "Giai đoạn Việt Nam dưới sự đô hộ của Pháp, dẫn đến các cuộc khởi nghĩa và chiến tranh giải phóng.",
-    "period": "1884 - 1945",
+    "id": 19,
+    "title": "Thời kỳ thực dân Pháp đô hộ",
+    "description": "Việt Nam bị thực dân Pháp cai trị, khởi đầu với sự kiện xâm lược Đà Nẵng năm 1858.",
+    "period": "1858 - 1945",
     "events": [
-      "Việt Nam trở thành thuộc địa của Pháp (1884)",
-      "Cuộc khởi nghĩa Yên Bái (1930)",
-      "Khởi nghĩa và chiến tranh giải phóng (1945)"
+      "Phong trào Đông Du (1905 - 1909)",
+      "Khởi nghĩa Yên Bái (1930)",
+      "Khởi nghĩa Nam Kỳ (1940)"
     ],
     "important_figures": [
       {
         "name": "Phan Bội Châu",
-        "role": "Lãnh đạo phong trào Đông Du và chống Pháp"
+        "role": "Lãnh đạo phong trào Đông Du"
       },
       {
         "name": "Nguyễn Thái Học",
-        "role": "Lãnh đạo cuộc khởi nghĩa Yên Bái"
+        "role": "Lãnh đạo khởi nghĩa Yên Bái"
       }
-    ]
+    ],
+    "youtube_id": "Rx7uo7ZdCM0",
+    "start_time": 0
   },
   {
-    "id": 17,
-    "title": "Thời cách mạng và kháng chiến",
-    "description": "Giai đoạn đấu tranh giành độc lập và kháng chiến chống Pháp, Nhật và Mỹ.",
+    "id": 20,
+    "title": "Cách mạng Tháng Tám và thời kỳ độc lập",
+    "description": "Thời kỳ cách mạng thành công và nước Việt Nam Dân chủ Cộng hòa ra đời.",
     "period": "1945 - 1975",
     "events": [
-      "Cách mạng tháng 8 (1945)",
-      "Kháng chiến chống Pháp (1946 - 1954)",
-      "Kháng chiến chống Mỹ (1955 - 1975)"
+      "Cách mạng Tháng Tám thành công (1945)",
+      "Tuyên ngôn độc lập tại Quảng trường Ba Đình (1945)",
+      "Cuộc kháng chiến chống Pháp (1946 - 1954)",
+      "Chiến thắng Điện Biên Phủ (1954)",
+      "Thống nhất đất nước sau cuộc kháng chiến chống Mỹ (1975)"
     ],
     "important_figures": [
       {
         "name": "Hồ Chí Minh",
-        "role": "Lãnh tụ cách mạng, người sáng lập nước Việt Nam Dân chủ Cộng hòa"
+        "role": "Người đọc Tuyên ngôn độc lập, sáng lập nước Việt Nam Dân chủ Cộng hòa"
       },
       {
         "name": "Võ Nguyên Giáp",
-        "role": "Tướng quân trong kháng chiến chống Pháp và Mỹ"
+        "role": "Tướng chỉ huy trong chiến thắng Điện Biên Phủ"
       }
-    ]
+    ],
+    "youtube_id": "JF9Sgpc-uaI",
+    "start_time": 0
   },
   {
-    "id": 18,
+    "id": 21,
     "title": "Thời kỳ hiện đại: Thống nhất đất nước",
     "description": "Giai đoạn Việt Nam thống nhất và phát triển sau khi chiến tranh kết thúc.",
     "period": "1975 - nay",
@@ -331,6 +440,8 @@
         "name": "Nguyễn Phú Trọng",
         "role": "Tổng Bí thư Đảng Cộng sản Việt Nam hiện nay"
       }
-    ]
+    ],
+    "youtube_id": "RjCWU2RDEh4",
+    "start_time": 29056
   }
 ]

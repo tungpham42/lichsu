@@ -33,7 +33,7 @@ function HistoryLessons() {
 
       {/* Modal for showing lesson details */}
       {currentLesson && (
-        <Modal show={showModal} onHide={handleClose}>
+        <Modal show={showModal} onHide={handleClose} size="lg">
           <Modal.Header closeButton>
             <Modal.Title>{currentLesson.title}</Modal.Title>
           </Modal.Header>
@@ -55,6 +55,23 @@ function HistoryLessons() {
                 </li>
               ))}
             </ul>
+
+            {/* YouTube Video */}
+            {currentLesson.youtube_id && (
+              <div className="mt-4">
+                <strong>Xem Video:</strong>
+                <div className="mt-3 embed-responsive embed-responsive-16by9">
+                  <iframe
+                    width="100%"
+                    height="400"
+                    src={`https://www.youtube.com/embed/${currentLesson.youtube_id}?start=${currentLesson.start_time}`}
+                    title={currentLesson.title}
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              </div>
+            )}
           </Modal.Body>
           <Modal.Footer>
             <Button variant="secondary" onClick={handleClose}>
