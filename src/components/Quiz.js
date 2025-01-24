@@ -40,8 +40,9 @@ const Quiz = () => {
 
   return (
     <>
+      <h2 className="mb-4">Câu Đố Lịch Sử</h2>
       {showResult ? (
-        <Card>
+        <Card className="shadow-lg">
           <Card.Body>
             <Card.Title>Kết quả</Card.Title>
             <Card.Text>
@@ -51,7 +52,7 @@ const Quiz = () => {
         </Card>
       ) : (
         questions.length > 0 && (
-          <Card>
+          <Card className="shadow-lg">
             <Card.Body>
               <Card.Title>{questions[currentQuestion].question}</Card.Title>
               {questions[currentQuestion].options.map((option, index) => (

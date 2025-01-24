@@ -26,7 +26,7 @@ function HistoryLessons() {
       <Row>
         {lessons.map((lesson) => (
           <Col key={lesson.id} md={4} className="mb-4">
-            <Card className="d-flex flex-column h-100">
+            <Card className="d-flex flex-column h-100 shadow-lg">
               <Card.Body>
                 <Card.Title>{lesson.title}</Card.Title>
                 <Card.Text>{lesson.description}</Card.Text>

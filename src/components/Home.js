@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <Row>
       <Col>
-        <Card>
+        <Card className="shadow-lg">
           <Card.Body>
             <Card.Title>Chào mừng đến với Lịch Sử Việt Nam</Card.Title>
             <Card.Text>
