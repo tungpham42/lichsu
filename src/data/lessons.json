@@ -13,6 +13,14 @@
       {
         "name": "Vua Hùng",
         "role": "Người sáng lập và cai trị nước Văn Lang"
+      },
+      {
+        "name": "Lạc Long Quân",
+        "role": "Vua Hùng đầu tiên"
+      },
+      {
+        "name": "Âu Cơ",
+        "role": "Nữ thần nước"
       }
     ],
     "youtube_id": "nGDnoy9cuQw",
@@ -32,6 +40,10 @@
       {
         "name": "An Dương Vương",
         "role": "Người sáng lập nước Âu Lạc"
+      },
+      {
+        "name": "Mỵ Châu",
+        "role": "Nàng công chúa xinh đẹp của Âu Lạc"
       }
     ],
     "youtube_id": "nGDnoy9cuQw",
@@ -40,7 +52,7 @@
   {
     "id": 3,
     "title": "Thời kỳ Bắc thuộc lần thứ nhất",
-    "description": "Việt Nam bị nhà Triệu cai trị, sau đó rơi vào tay nhà Hán của Trung Quốc.",
+    "description": "Giai đoạn Việt Nam bị nhà Triệu rồi nhà Hán đô hộ. Tuy nhiên, tinh thần dân tộc vẫn được giữ vững qua các cuộc khởi nghĩa của Hai Bà Trưng. Đây là biểu tượng cho ý chí độc lập của người Việt.",
     "period": "207 TCN - 40",
     "events": [
       "Khởi nghĩa Hai Bà Trưng (40 - 43)",
@@ -50,6 +62,14 @@
       {
         "name": "Hai Bà Trưng",
         "role": "Lãnh đạo cuộc khởi nghĩa chống nhà Hán"
+      },
+      {
+        "name": "Trưng Trắc",
+        "role": "Một trong hai nữ anh hùng Hai Bà Trưng"
+      },
+      {
+        "name": "Trưng Nhị",
+        "role": "Một trong hai nữ anh hùng Hai Bà Trưng"
       }
     ],
     "youtube_id": "lOeq8pMtMsc",
@@ -58,7 +78,7 @@
   {
     "id": 4,
     "title": "Thời kỳ Bắc thuộc lần thứ hai",
-    "description": "Việt Nam dưới sự thống trị của nhà Đông Hán.",
+    "description": "Giai đoạn kéo dài gần 500 năm, trong đó Việt Nam dưới sự thống trị của nhà Đông Hán và các triều đại phương Bắc khác. Thời kỳ này ghi nhận nhiều cuộc khởi nghĩa quan trọng.",
     "period": "40 - 543",
     "events": ["Khởi nghĩa Bà Triệu (248)", "Khởi nghĩa Lý Bí (541-544)"],
     "important_figures": [
@@ -77,7 +97,7 @@
   {
     "id": 5,
     "title": "Thời kỳ Bắc thuộc lần thứ ba",
-    "description": "Việt Nam bị nhà Lương cai trị và sau đó là nhà Tùy.",
+    "description": "Việt Nam trải qua giai đoạn bị đô hộ bởi nhà Lương và nhà Tùy, song các cuộc khởi nghĩa lớn như của Mai Thúc Loan và Phùng Hưng đã thể hiện tinh thần dân tộc mạnh mẽ.",
     "period": "544 - 602",
     "events": ["Khởi nghĩa Mai Thúc Loan (722)", "Khởi nghĩa Phùng Hưng (776)"],
     "important_figures": [
@@ -96,7 +116,7 @@
   {
     "id": 6,
     "title": "Thời kỳ tự chủ: Khúc Thừa Dụ, Dương Đình Nghệ",
-    "description": "Việt Nam giành lại tự chủ dưới sự lãnh đạo của Khúc Thừa Dụ và Dương Đình Nghệ.",
+    "description": "Một bước ngoặt lịch sử quan trọng khi người Việt giành lại quyền tự chủ từ tay các triều đại phương Bắc, mở đầu cho thời kỳ độc lập lâu dài của dân tộc.",
     "period": "905 - 939",
     "events": [
       "Khúc Thừa Dụ giành quyền tự chủ",
@@ -110,6 +130,10 @@
       {
         "name": "Dương Đình Nghệ",
         "role": "Người lãnh đạo chống nhà Tống"
+      },
+      {
+        "name": "Kiều Công Tiễn",
+        "role": "Vị tướng nổi tiếng thời Khúc Thừa Dụ"
       }
     ],
     "youtube_id": "lOeq8pMtMsc",
@@ -118,7 +142,7 @@
   {
     "id": 7,
     "title": "Thời kỳ nhà Ngô",
-    "description": "Giai đoạn của nhà Ngô trong lịch sử Việt Nam.",
+    "description": "Giai đoạn sau chiến thắng Bạch Đằng, Ngô Quyền chấm dứt hoàn toàn ách đô hộ của phương Bắc, mở ra thời kỳ độc lập và thống nhất đất nước.",
     "period": "939 - 965",
     "events": [
       "Ngô Quyền chiến thắng Bạch Đằng, chấm dứt ách đô hộ của Nam Hán"
@@ -127,6 +151,10 @@
       {
         "name": "Ngô Quyền",
         "role": "Người lập nên nhà Ngô và chiến thắng Bạch Đằng"
+      },
+      {
+        "name": "Dương Tam Kha",
+        "role": "Vị tướng nổi tiếng thời Ngô Quyền"
       }
     ],
     "youtube_id": "lOeq8pMtMsc",
@@ -135,13 +163,17 @@
   {
     "id": 8,
     "title": "Thời kỳ nhà Đinh",
-    "description": "Thời kỳ của nhà Đinh, nơi Đinh Tiên Hoàng thống nhất đất nước.",
+    "description": "Sau thời kỳ loạn 12 sứ quân, Đinh Tiên Hoàng thống nhất đất nước, lập nên nhà nước Đại Cồ Việt, khẳng định chủ quyền quốc gia.",
     "period": "968 - 980",
     "events": ["Đinh Tiên Hoàng thống nhất đất nước và lập nước Đại Cồ Việt"],
     "important_figures": [
       {
         "name": "Đinh Tiên Hoàng",
         "role": "Hoàng đế đầu tiên của Đại Cồ Việt"
+      },
+      {
+        "name": "Lê Hoàn",
+        "role": "Vị tướng nổi tiếng thời Đinh Tiên Hoàng"
       }
     ],
     "youtube_id": "0TrD-u9ilfQ",
@@ -150,7 +182,7 @@
   {
     "id": 9,
     "title": "Thời kỳ Tiền Lê",
-    "description": "Thời kỳ của nhà Tiền Lê, giai đoạn tiếp theo sau nhà Đinh.",
+    "description": "Thời kỳ của nhà Tiền Lê, giai đoạn tiếp theo sau nhà Đinh. Nhà Tiền Lê chống nhà Tống, khẳng định chủ quyền đất nước.",
     "period": "980 - 1009",
     "events": ["Nhà Tiền Lê chống Tống (981)"],
     "important_figures": [
@@ -165,7 +197,7 @@
   {
     "id": 10,
     "title": "Thời kỳ nhà Lý",
-    "description": "Thời kỳ thịnh trị của Đại Việt, nổi tiếng với sự phát triển văn hóa, Phật giáo và kinh đô Thăng Long.",
+    "description": "Đây là giai đoạn đánh dấu sự ổn định và phát triển toàn diện về kinh tế, chính trị, văn hóa và quân sự của Đại Việt.",
     "period": "1009 - 1225",
     "events": [
       "Lý Thái Tổ dời đô từ Hoa Lư về Thăng Long (1010)",
@@ -188,7 +220,7 @@
   {
     "id": 11,
     "title": "Thời kỳ nhà Trần",
-    "description": "Thời kỳ kháng chiến chống Nguyên - Mông và phát triển nền văn hóa Đại Việt.",
+    "description": "Thời kỳ kháng chiến chống Nguyên - Mông và phát triển nền văn hóa Đại Việt. Trần Hưng Đạo là người lãnh đạo kháng chiến nổi tiếng.",
     "period": "1225 - 1400",
     "events": [
       "Ba lần kháng chiến chống Nguyên - Mông (1258, 1285, 1288)",
@@ -203,6 +235,14 @@
       {
         "name": "Trần Nhân Tông",
         "role": "Vua và nhà tư tưởng nổi tiếng thời Trần"
+      },
+      {
+        "name": "Trần Quốc Tuấn",
+        "role": "Vị tướng nổi tiếng với chiến thắng Bạch Đằng"
+      },
+      {
+        "name": "Trần Thánh Tông",
+        "role": "Vua nổi tiếng với việc phát triển văn hóa"
       }
     ],
     "youtube_id": "OhDpiE48Jkk",
@@ -211,7 +251,7 @@
   {
     "id": 12,
     "title": "Thời kỳ nhà Hồ và thuộc Minh",
-    "description": "Nhà Hồ thất bại trong việc cải cách và bị nhà Minh xâm lược.",
+    "description": "Nhà Hồ thất bại trong việc cải cách và bị nhà Minh xâm lược. Dù tồn tại chỉ 7 năm, nhà Hồ đã để lại nhiều dấu ấn trong cải cách chính trị, kinh tế và xã hội.",
     "period": "1400 - 1427",
     "events": [
       "Nhà Hồ lên ngôi (1400)",
@@ -234,7 +274,7 @@
   {
     "id": 13,
     "title": "Thời kỳ nhà Lê Sơ",
-    "description": "Thời kỳ độc lập, phát triển văn hóa và pháp luật dưới triều Lê.",
+    "description": "Thời kỳ độc lập, phát triển văn hóa và pháp luật dưới triều Lê. Nhà Lê Sơ được xem là giai đoạn đánh dấu sự phục hồi và phát triển của nước Việt.",
     "period": "1428 - 1527",
     "events": [
       "Lê Lợi lập nhà Lê (1428)",
@@ -257,7 +297,7 @@
   {
     "id": 14,
     "title": "Thời kỳ nhà Mạc",
-    "description": "Thời kỳ nhà Mạc do Mạc Đăng Dung sáng lập, kéo dài gần 65 năm và đối đầu với các cuộc chiến tranh Lê - Mạc.",
+    "description": "Thời kỳ nhà Mạc do Mạc Đăng Dung sáng lập, kéo dài gần 65 năm và đối đầu với các cuộc chiến tranh Lê - Mạc. Đây là giai đoạn đánh dấu sự suy tàn của nhà Lê.",
     "period": "1527 - 1592",
     "events": [
       "Mạc Đăng Dung lật đổ nhà Lê, lập nhà Mạc (1527)",
@@ -298,6 +338,10 @@
       {
         "name": "Trịnh Căn",
         "role": "Một trong những chúa Trịnh kiệt xuất trong việc củng cố quyền lực"
+      },
+      {
+        "name": "Trịnh Sâm",
+        "role": "Chúa Trịnh cuối cùng, thất bại trước nhà Tây Sơn"
       }
     ],
     "youtube_id": "RjCWU2RDEh4",
@@ -327,6 +371,10 @@
       {
         "name": "Nguyễn Phúc Thuần",
         "role": "Chúa Nguyễn cuối cùng, thất bại trước nhà Tây Sơn"
+      },
+      {
+        "name": "Nguyễn Ánh",
+        "role": "Người sáng lập nhà Nguyễn"
       }
     ],
     "youtube_id": "Swuumiw0hq4",
@@ -335,16 +383,25 @@
   {
     "id": 17,
     "title": "Thời kỳ Tây Sơn",
-    "description": "Thời kỳ của phong trào khởi nghĩa Tây Sơn và chiến thắng trước quân Thanh.",
+    "description": "Thời kỳ của phong trào khởi nghĩa Tây Sơn và chiến thắng trước quân Thanh. Nguyễn Huệ lên ngôi hoàng đế với tên là Quang Trung.",
     "period": "1771 - 1802",
     "events": [
       "Nguyễn Huệ đánh bại quân Xiêm tại Rạch Gầm - Xoài Mút (1785)",
-      "Chiến thắng Ngọc Hồi - Đống Đa chống quân Thanh (1789)"
+      "Chiến thắng Ngọc Hồi - Đống Đa chống quân Thanh (1789)",
+      "Lên ngôi hoàng đế với tên là Quang Trung (1788)"
     ],
     "important_figures": [
       {
         "name": "Nguyễn Huệ (Quang Trung)",
         "role": "Lãnh đạo phong trào Tây Sơn và hoàng đế Đại Việt"
+      },
+      {
+        "name": "Nguyễn Nhạc",
+        "role": "Người sáng lập phong trào Tây Sơn"
+      },
+      {
+        "name": "Nguyễn Lữ",
+        "role": "Người sáng lập phong trào Tây Sơn"
       }
     ],
     "youtube_id": "x3lnii_J9jk",
@@ -353,7 +410,7 @@
   {
     "id": 18,
     "title": "Thời kỳ nhà Nguyễn",
-    "description": "Triều đại cuối cùng của Việt Nam, gắn liền với thời kỳ thực dân Pháp xâm lược.",
+    "description": "Triều đại cuối cùng của Việt Nam, gắn liền với thời kỳ thực dân Pháp xâm lược. Nguyễn Ánh thống nhất đất nước, lập nhà Nguyễn.",
     "period": "1802 - 1945",
     "events": [
       "Nguyễn Ánh thống nhất đất nước, lập nhà Nguyễn (1802)",
@@ -368,6 +425,14 @@
       {
         "name": "Tôn Thất Thuyết",
         "role": "Lãnh đạo phong trào Cần Vương"
+      },
+      {
+        "name": "Hàm Nghi",
+        "role": "Vua chống Pháp, bị đày đến Algeria"
+      },
+      {
+        "name": "Minh Mạng",
+        "role": "Vị vua có nhiều thành tích nhất của nhà Nguyễn"
       }
     ],
     "youtube_id": "96SVntYMrPk",
@@ -376,7 +441,7 @@
   {
     "id": 19,
     "title": "Thời kỳ thực dân Pháp đô hộ",
-    "description": "Việt Nam bị thực dân Pháp cai trị, khởi đầu với sự kiện xâm lược Đà Nẵng năm 1858.",
+    "description": "Việt Nam bị thực dân Pháp cai trị, khởi đầu với sự kiện xâm lược Đà Nẵng năm 1858. Phong trào Đông Du, khởi nghĩa Yên Bái và Nam Kỳ là những biểu tượng cho tinh thần đấu tranh chống Pháp.",
     "period": "1858 - 1945",
     "events": [
       "Phong trào Đông Du (1905 - 1909)",
@@ -391,6 +456,10 @@
       {
         "name": "Nguyễn Thái Học",
         "role": "Lãnh đạo khởi nghĩa Yên Bái"
+      },
+      {
+        "name": "Bảo Đại",
+        "role": "Vua cuối cùng của nhà Nguyễn"
       }
     ],
     "youtube_id": "Rx7uo7ZdCM0",
@@ -399,7 +468,7 @@
   {
     "id": 20,
     "title": "Cách mạng Tháng Tám và thời kỳ độc lập",
-    "description": "Thời kỳ cách mạng thành công và nước Việt Nam Dân chủ Cộng hòa ra đời.",
+    "description": "Thời kỳ cách mạng thành công và nước Việt Nam Dân chủ Cộng hòa ra đời. Cuộc kháng chiến chống Pháp và Mỹ đã thể hiện tinh thần đoàn kết, quyết tâm độc lập của dân tộc.",
     "period": "1945 - 1975",
     "events": [
       "Cách mạng Tháng Tám thành công (1945)",
@@ -416,6 +485,10 @@
       {
         "name": "Võ Nguyên Giáp",
         "role": "Tướng chỉ huy trong chiến thắng Điện Biên Phủ"
+      },
+      {
+        "name": "Phạm Văn Đồng",
+        "role": "Thủ tướng chính phủ Việt Nam Dân chủ Cộng hòa"
       }
     ],
     "youtube_id": "JF9Sgpc-uaI",
@@ -424,7 +497,7 @@
   {
     "id": 21,
     "title": "Thời kỳ hiện đại: Thống nhất đất nước",
-    "description": "Giai đoạn Việt Nam thống nhất và phát triển sau khi chiến tranh kết thúc.",
+    "description": "Giai đoạn Việt Nam thống nhất và phát triển sau khi chiến tranh kết thúc. Đất nước chuyển từ thời kỳ cách mạng sang thời kỳ xây dựng và phát triển.",
     "period": "1975 - nay",
     "events": [
       "Giải phóng miền Nam (1975)",
