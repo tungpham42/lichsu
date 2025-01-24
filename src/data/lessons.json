@@ -1,0 +1,336 @@
+[
+  {
+    "id": 1,
+    "title": "Thời kỳ Hùng Vương",
+    "description": "Thời kỳ dựng nước đầu tiên trong lịch sử Việt Nam, gắn liền với truyền thuyết Hùng Vương và nước Văn Lang.",
+    "period": "2879 TCN - 258 TCN",
+    "events": [
+      "Truyền thuyết Lạc Long Quân và Âu Cơ",
+      "Thành lập nước Văn Lang",
+      "Lễ hội Giỗ tổ Hùng Vương"
+    ],
+    "important_figures": [
+      {
+        "name": "Vua Hùng",
+        "role": "Người sáng lập và cai trị nước Văn Lang"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Thời kỳ An Dương Vương và nước Âu Lạc",
+    "description": "Sau khi vua Hùng truyền ngôi, An Dương Vương lập nước Âu Lạc, nổi tiếng với truyền thuyết nỏ thần.",
+    "period": "257 TCN - 207 TCN",
+    "events": [
+      "Thành lập nước Âu Lạc",
+      "Xây thành Cổ Loa",
+      "Mất nước vào tay Triệu Đà"
+    ],
+    "important_figures": [
+      {
+        "name": "An Dương Vương",
+        "role": "Người sáng lập nước Âu Lạc"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Thời kỳ Bắc thuộc lần thứ nhất",
+    "description": "Việt Nam bị nhà Triệu cai trị, sau đó rơi vào tay nhà Hán của Trung Quốc.",
+    "period": "207 TCN - 40",
+    "events": [
+      "Khởi nghĩa Hai Bà Trưng (40 - 43)",
+      "Cuộc chiến chống sự đô hộ của nhà Triệu và nhà Hán"
+    ],
+    "important_figures": [
+      {
+        "name": "Hai Bà Trưng",
+        "role": "Lãnh đạo cuộc khởi nghĩa chống nhà Hán"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Thời kỳ Bắc thuộc lần thứ hai",
+    "description": "Việt Nam dưới sự thống trị của nhà Đông Hán.",
+    "period": "40 - 543",
+    "events": ["Khởi nghĩa Bà Triệu (248)", "Khởi nghĩa Lý Bí (541-544)"],
+    "important_figures": [
+      {
+        "name": "Bà Triệu",
+        "role": "Lãnh đạo cuộc khởi nghĩa chống nhà Đông Hán"
+      },
+      {
+        "name": "Lý Bí",
+        "role": "Người sáng lập nước Vạn Xuân"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Thời kỳ Bắc thuộc lần thứ ba",
+    "description": "Việt Nam bị nhà Lương cai trị và sau đó là nhà Tùy.",
+    "period": "544 - 602",
+    "events": ["Khởi nghĩa Mai Thúc Loan (722)", "Khởi nghĩa Phùng Hưng (776)"],
+    "important_figures": [
+      {
+        "name": "Mai Thúc Loan",
+        "role": "Lãnh đạo khởi nghĩa chống nhà Lương"
+      },
+      {
+        "name": "Phùng Hưng",
+        "role": "Lãnh đạo khởi nghĩa chống nhà Tùy"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Thời kỳ tự chủ: Khúc Thừa Dụ, Dương Đình Nghệ",
+    "description": "Việt Nam giành lại tự chủ dưới sự lãnh đạo của Khúc Thừa Dụ và Dương Đình Nghệ.",
+    "period": "905 - 939",
+    "events": [
+      "Khúc Thừa Dụ giành quyền tự chủ",
+      "Dương Đình Nghệ chống nhà Tống"
+    ],
+    "important_figures": [
+      {
+        "name": "Khúc Thừa Dụ",
+        "role": "Người sáng lập nhà Khúc"
+      },
+      {
+        "name": "Dương Đình Nghệ",
+        "role": "Người lãnh đạo chống nhà Tống"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Thời kỳ nhà Ngô",
+    "description": "Giai đoạn của nhà Ngô trong lịch sử Việt Nam.",
+    "period": "939 - 965",
+    "events": [
+      "Ngô Quyền chiến thắng Bạch Đằng, chấm dứt ách đô hộ của Nam Hán"
+    ],
+    "important_figures": [
+      {
+        "name": "Ngô Quyền",
+        "role": "Người lập nên nhà Ngô và chiến thắng Bạch Đằng"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Thời kỳ nhà Đinh",
+    "description": "Thời kỳ của nhà Đinh, nơi Đinh Tiên Hoàng thống nhất đất nước.",
+    "period": "968 - 980",
+    "events": ["Đinh Tiên Hoàng thống nhất đất nước và lập nước Đại Cồ Việt"],
+    "important_figures": [
+      {
+        "name": "Đinh Tiên Hoàng",
+        "role": "Hoàng đế đầu tiên của Đại Cồ Việt"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Thời kỳ Tiền Lê",
+    "description": "Thời kỳ của nhà Tiền Lê, giai đoạn tiếp theo sau nhà Đinh.",
+    "period": "980 - 1009",
+    "events": ["Nhà Tiền Lê chống Tống (981)"],
+    "important_figures": [
+      {
+        "name": "Lê Đại Hành",
+        "role": "Người lãnh đạo chống nhà Tống"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Thời kỳ nhà Lý",
+    "description": "Thời kỳ thịnh trị của Đại Việt, nổi tiếng với sự phát triển văn hóa, Phật giáo và kinh đô Thăng Long.",
+    "period": "1009 - 1225",
+    "events": [
+      "Lý Thái Tổ dời đô từ Hoa Lư về Thăng Long (1010)",
+      "Nhà Lý chống Tống (1075 - 1077)",
+      "Quốc hiệu Đại Việt được sử dụng"
+    ],
+    "important_figures": [
+      {
+        "name": "Lý Thái Tổ",
+        "role": "Người sáng lập nhà Lý và dời đô về Thăng Long"
+      },
+      {
+        "name": "Lý Thường Kiệt",
+        "role": "Vị tướng nổi tiếng với cuộc kháng chiến chống Tống"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "title": "Thời kỳ nhà Trần",
+    "description": "Thời kỳ kháng chiến chống Nguyên - Mông và phát triển nền văn hóa Đại Việt.",
+    "period": "1225 - 1400",
+    "events": [
+      "Ba lần kháng chiến chống Nguyên - Mông (1258, 1285, 1288)",
+      "Chiến thắng Bạch Đằng của Trần Hưng Đạo (1288)",
+      "Phát triển Nho giáo và chế độ thi cử"
+    ],
+    "important_figures": [
+      {
+        "name": "Trần Hưng Đạo",
+        "role": "Người lãnh đạo kháng chiến chống quân Nguyên - Mông"
+      },
+      {
+        "name": "Trần Nhân Tông",
+        "role": "Vua và nhà tư tưởng nổi tiếng thời Trần"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "title": "Thời kỳ nhà Hồ và thuộc Minh",
+    "description": "Nhà Hồ thất bại trong việc cải cách và bị nhà Minh xâm lược.",
+    "period": "1400 - 1427",
+    "events": [
+      "Nhà Hồ lên ngôi (1400)",
+      "Khởi nghĩa Lam Sơn giành độc lập (1418 - 1427)",
+      "Chiến thắng Chi Lăng (1427)"
+    ],
+    "important_figures": [
+      {
+        "name": "Hồ Quý Ly",
+        "role": "Người sáng lập nhà Hồ"
+      },
+      {
+        "name": "Lê Lợi",
+        "role": "Người lãnh đạo khởi nghĩa Lam Sơn"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "title": "Thời kỳ nhà Lê sơ",
+    "description": "Thời kỳ độc lập, phát triển văn hóa và pháp luật dưới triều Lê.",
+    "period": "1428 - 1527",
+    "events": [
+      "Lê Lợi lập nhà Lê (1428)",
+      "Hồng Đức ban hành bộ luật nổi tiếng (1483)",
+      "Phát triển giáo dục Nho học"
+    ],
+    "important_figures": [
+      {
+        "name": "Lê Thái Tổ (Lê Lợi)",
+        "role": "Người sáng lập nhà Lê sơ"
+      },
+      {
+        "name": "Lê Thánh Tông",
+        "role": "Vị vua nổi tiếng với cải cách và phát triển văn hóa"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "title": "Thời kỳ Tây Sơn",
+    "description": "Thời kỳ của phong trào Tây Sơn, nổi bật với ba anh em Nguyễn Nhạc, Nguyễn Lữ, và Nguyễn Huệ chống lại sự thống trị của nhà Nguyễn và phong trào phản kháng triều đình.",
+    "period": "1771 - 1802",
+    "events": [
+      "Khởi nghĩa Tây Sơn (1771)",
+      "Nguyễn Huệ đánh bại quân Xiêm và quân Thanh (1785, 1789)",
+      "Lập nhà Nguyễn"
+    ],
+    "important_figures": [
+      {
+        "name": "Nguyễn Huệ (Quang Trung)",
+        "role": "Vị anh hùng trong cuộc khởi nghĩa Tây Sơn và người sáng lập triều đại nhà Nguyễn"
+      },
+      {
+        "name": "Nguyễn Nhạc",
+        "role": "Một trong ba anh em lãnh đạo phong trào Tây Sơn"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "title": "Thời nhà Nguyễn",
+    "description": "Thời kỳ của triều đại Nguyễn, gắn liền với việc thống nhất đất nước và các cuộc chiến tranh xâm lược từ phương Tây.",
+    "period": "1802 - 1945",
+    "events": [
+      "Nguyễn Ánh lên ngôi, lập nhà Nguyễn (1802)",
+      "Các cuộc chiến tranh với Pháp và các nước phương Tây (1858 - 1884)",
+      "Cải cách, văn hóa và giáo dục dưới triều Nguyễn"
+    ],
+    "important_figures": [
+      {
+        "name": "Nguyễn Ánh (Gia Long)",
+        "role": "Người sáng lập triều Nguyễn"
+      },
+      {
+        "name": "Tự Đức",
+        "role": "Vị vua trong thời kỳ cuối triều Nguyễn"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "title": "Thời Pháp thuộc",
+    "description": "Giai đoạn Việt Nam dưới sự đô hộ của Pháp, dẫn đến các cuộc khởi nghĩa và chiến tranh giải phóng.",
+    "period": "1884 - 1945",
+    "events": [
+      "Việt Nam trở thành thuộc địa của Pháp (1884)",
+      "Cuộc khởi nghĩa Yên Bái (1930)",
+      "Khởi nghĩa và chiến tranh giải phóng (1945)"
+    ],
+    "important_figures": [
+      {
+        "name": "Phan Bội Châu",
+        "role": "Lãnh đạo phong trào Đông Du và chống Pháp"
+      },
+      {
+        "name": "Nguyễn Thái Học",
+        "role": "Lãnh đạo cuộc khởi nghĩa Yên Bái"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "title": "Thời cách mạng và kháng chiến",
+    "description": "Giai đoạn đấu tranh giành độc lập và kháng chiến chống Pháp, Nhật và Mỹ.",
+    "period": "1945 - 1975",
+    "events": [
+      "Cách mạng tháng 8 (1945)",
+      "Kháng chiến chống Pháp (1946 - 1954)",
+      "Kháng chiến chống Mỹ (1955 - 1975)"
+    ],
+    "important_figures": [
+      {
+        "name": "Hồ Chí Minh",
+        "role": "Lãnh tụ cách mạng, người sáng lập nước Việt Nam Dân chủ Cộng hòa"
+      },
+      {
+        "name": "Võ Nguyên Giáp",
+        "role": "Tướng quân trong kháng chiến chống Pháp và Mỹ"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "title": "Thời kỳ hiện đại: Thống nhất đất nước",
+    "description": "Giai đoạn Việt Nam thống nhất và phát triển sau khi chiến tranh kết thúc.",
+    "period": "1975 - nay",
+    "events": [
+      "Giải phóng miền Nam (1975)",
+      "Thành lập nước Cộng hòa xã hội chủ nghĩa Việt Nam (1976)",
+      "Đổi mới và hội nhập quốc tế (1986 - nay)"
+    ],
+    "important_figures": [
+      {
+        "name": "Nguyễn Văn Linh",
+        "role": "Người lãnh đạo cải cách, đổi mới nền kinh tế Việt Nam"
+      },
+      {
+        "name": "Nguyễn Phú Trọng",
+        "role": "Tổng Bí thư Đảng Cộng sản Việt Nam hiện nay"
+      }
+    ]
+  }
+]
