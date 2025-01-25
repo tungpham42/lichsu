@@ -12,9 +12,18 @@ const App = () => {
       <Header />
       <Container className="my-5 pt-5">
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/bai-hoc" element={<HistoryLessons />} />
-          <Route path="/cau-do" element={<Quiz />} />
+          <Route
+            path="/"
+            element={<Home headTitle="Trang chủ - Lịch sử Việt Nam" />}
+          />
+          <Route
+            path="/bai-hoc"
+            element={<HistoryLessons headTitle="Bài học - Lịch sử Việt Nam" />}
+          />
+          <Route
+            path="/cau-do"
+            element={<Quiz headTitle="Câu đố - Lịch sử Việt Nam" />}
+          />
         </Routes>
       </Container>
     </Router>
