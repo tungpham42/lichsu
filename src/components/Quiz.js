@@ -1,6 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Button, Card, Alert } from "react-bootstrap";
 import questions from "../data/questions.json";
+
+// Helper function to shuffle an array
+const shuffleArray = (array) => {
+  const shuffledArray = [...array];
+  for (let i = shuffledArray.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+  }
+  return shuffledArray;
+};
 
 const Quiz = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -8,12 +18,20 @@ const Quiz = () => {
   const [showResult, setShowResult] = useState(false);
   const [answered, setAnswered] = useState(false);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
+  const [shuffledOptions, setShuffledOptions] = useState([]);
+
+  const currentQuestionData = questions[currentQuestion];
+
+  // Shuffle options only once when the question is loaded
+  useEffect(() => {
+    setShuffledOptions(shuffleArray(currentQuestionData.options));
+  }, [currentQuestionData]);
 
   const handleAnswer = (answer) => {
     setSelectedAnswer(answer);
     setAnswered(true);
 
-    if (answer === questions[currentQuestion].answer) {
+    if (answer === currentQuestionData.answer) {
       setScore(score + 1);
     }
   };
@@ -45,13 +63,13 @@ const Quiz = () => {
         questions.length > 0 && (
           <Card className="shadow-lg">
             <Card.Body>
-              <Card.Title>{questions[currentQuestion].question}</Card.Title>
-              {questions[currentQuestion].options.map((option, index) => (
+              <Card.Title>{currentQuestionData.question}</Card.Title>
+              {shuffledOptions.map((option, index) => (
                 <Button
                   key={index}
                   className="m-2"
                   variant={
-                    answered && option === questions[currentQuestion].answer
+                    answered && option === currentQuestionData.answer
                       ? "success"
                       : "primary"
                   }
@@ -66,15 +84,15 @@ const Quiz = () => {
                 <>
                   <Alert
                     variant={
-                      selectedAnswer === questions[currentQuestion].answer
+                      selectedAnswer === currentQuestionData.answer
                         ? "success"
                         : "danger"
                     }
                     className="mt-3"
                   >
-                    {selectedAnswer === questions[currentQuestion].answer
+                    {selectedAnswer === currentQuestionData.answer
                       ? "Chính xác!"
-                      : `Sai rồi! Đáp án đúng là: ${questions[currentQuestion].answer}`}
+                      : `Sai rồi! Đáp án đúng là: ${currentQuestionData.answer}`}
                   </Alert>
                   <Button
                     className="mt-3"
