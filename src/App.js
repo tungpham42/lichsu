@@ -10,7 +10,7 @@ const App = () => {
   return (
     <Router>
       <Header />
-      <Container className="mt-4 pt-5">
+      <Container className="my-5 pt-5">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/bai-hoc" element={<HistoryLessons />} />
