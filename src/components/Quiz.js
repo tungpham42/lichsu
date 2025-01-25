@@ -1,22 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Button, Card, Alert } from "react-bootstrap";
-import questionsData from "../data/questions.json";
+import questions from "../data/questions.json";
 
 const Quiz = () => {
-  const [questions, setQuestions] = useState([]);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [showResult, setShowResult] = useState(false);
   const [answered, setAnswered] = useState(false);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
-
-  // Shuffle the questions when the component mounts
-  useEffect(() => {
-    const shuffledQuestions = [...questionsData].sort(
-      () => Math.random() - 0.5
-    );
-    setQuestions(shuffledQuestions);
-  }, []);
 
   const handleAnswer = (answer) => {
     setSelectedAnswer(answer);
