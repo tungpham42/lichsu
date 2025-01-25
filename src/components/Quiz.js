@@ -54,7 +54,7 @@ const Quiz = ({ headTitle }) => {
         <title>{headTitle}</title>
         <meta property="og:title" content={headTitle} />
       </Helmet>
-      <h2 className="mb-4">Câu Đố Lịch Sử</h2>
+      <h1 className="mb-4">Câu Đố Lịch Sử</h1>
       {showResult ? (
         <Card className="shadow-lg">
           <Card.Body>

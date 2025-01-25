@@ -9,13 +9,11 @@ const Home = ({ headTitle }) => {
         <title>{headTitle}</title>
         <meta property="og:title" content={headTitle} />
       </Helmet>
+      <h1 className="mb-4">Chào mừng đến với Lịch Sử Việt Nam</h1>
       <Row>
         <Col>
           <Card className="shadow-lg">
             <Card.Body>
-              <Card.Title className="display-6">
-                Chào mừng đến với Lịch Sử Việt Nam
-              </Card.Title>
               <Card.Text>
                 <blockquote className="blockquote">
                   <p>Không có gì quý hơn độc lập, tự do.</p>
