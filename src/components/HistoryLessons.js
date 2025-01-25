@@ -76,6 +76,10 @@ function HistoryLessons() {
                 </li>
               ))}
             </ul>
+            <p>
+              <strong>Chi tiết:</strong>
+            </p>
+            <div dangerouslySetInnerHTML={{ __html: currentLesson.content }} />
           </Modal.Body>
           <Modal.Footer>
             <Button variant="secondary" onClick={handleLessonClose}>
