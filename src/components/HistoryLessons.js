@@ -30,7 +30,7 @@ function HistoryLessons({ headTitle }) {
       <h1 className="mb-4">Bài Học Lịch Sử</h1>
       <Row>
         {lessons.map((lesson) => (
-          <Col key={lesson.id} md={4} className="mb-4">
+          <Col key={lesson.id} xl={4} lg={4} md={6} sm={12} className="mb-4">
             <Card className="d-flex flex-column h-100 shadow-lg">
               <Card.Body>
                 <Card.Title>{lesson.title}</Card.Title>
