@@ -233,11 +233,11 @@ const WheelOfFortune = ({ headTitle }) => {
         guessedLetters={guessedLetters}
       />
 
-      <div className="mt-4 col-9 mx-auto">
+      <div className="mt-4 col-12 mx-auto">
         <h4>Người chơi</h4>
         <Form onSubmit={(e) => e.preventDefault()} className="mb-3">
           <Row>
-            <Col xs={8}>
+            <Col xs={10}>
               <Form.Control
                 type="text"
                 placeholder="Nhập tên người chơi"
@@ -246,9 +246,9 @@ const WheelOfFortune = ({ headTitle }) => {
                 onKeyDown={handleKeyDown}
               />
             </Col>
-            <Col xs={4}>
+            <Col xs={2}>
               <Button onClick={addPlayer} disabled={!newPlayerName.trim()}>
-                Thêm người chơi
+                Thêm
               </Button>
             </Col>
           </Row>
