@@ -30,6 +30,12 @@ const GuessLetterModal = ({
     onClose(); // Close the modal
   };
 
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      handleSubmit();
+    }
+  };
+
   return (
     <Modal show={show} onHide={onClose}>
       <Modal.Header closeButton>
@@ -40,6 +46,7 @@ const GuessLetterModal = ({
           type="text"
           value={letter}
           onChange={(e) => setLetter(e.target.value)}
+          onKeyDown={handleKeyDown}
           maxLength="1"
           autoFocus
         />
