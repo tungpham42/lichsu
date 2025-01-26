@@ -31,7 +31,7 @@ const Timeline = ({ headTitle }) => {
             md={6}
             className="d-flex align-items-center justify-content-center"
           >
-            <div className="m-4 timeline-circle bg-primary text-white text-center">
+            <div className="m-4 timeline-circle bg-primary text-white text-center shadow-lg">
               <strong>{item.period}</strong>
             </div>
           </Col>
