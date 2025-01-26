@@ -4,6 +4,7 @@ import Layout from "./components/Layout";
 import Home from "./components/Home";
 import HistoryLessons from "./components/HistoryLessons";
 import Quiz from "./components/Quiz";
+import Timeline from "./components/Timeline";
 
 const App = () => {
   return (
@@ -17,6 +18,10 @@ const App = () => {
           <Route
             path="/bai-hoc"
             element={<HistoryLessons headTitle="Bài học - Lịch sử Việt Nam" />}
+          />
+          <Route
+            path="/tien-trinh"
+            element={<Timeline headTitle="Tiến trình - Lịch sử Việt Nam" />}
           />
           <Route
             path="/cau-do"

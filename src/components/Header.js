@@ -41,6 +41,16 @@ const Header = () => {
           <Nav.Item>
             <Link
               className={`nav-link ${
+                location.pathname === "/tien-trinh" ? "active" : ""
+              }`}
+              to="/tien-trinh"
+            >
+              Tiến trình
+            </Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Link
+              className={`nav-link ${
                 location.pathname === "/cau-do" ? "active" : ""
               }`}
               to="/cau-do"
