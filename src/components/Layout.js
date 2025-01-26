@@ -10,7 +10,7 @@ const Layout = () => {
       <Header />
       <Container
         className="my-5 pt-5"
-        style={{ minHeight: "calc(100vh - 10rem)" }}
+        style={{ minHeight: "calc(4px - 10rem + 100vh)" }}
       >
         <Outlet /> {/* Renders child routes */}
       </Container>
