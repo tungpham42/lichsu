@@ -27,7 +27,7 @@ function HistoryLessons({ headTitle }) {
         <title>{headTitle}</title>
         <meta property="og:title" content={headTitle} />
       </Helmet>
-      <h1 className="mb-4">Bài Học Lịch Sử</h1>
+      <h1 className="mb-4 text-center">Bài Học Lịch Sử</h1>
       <Row>
         {lessons.map((lesson) => (
           <Col key={lesson.id} xl={4} lg={4} md={6} sm={12} className="mb-4">

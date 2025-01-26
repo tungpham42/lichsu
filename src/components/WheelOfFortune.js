@@ -114,7 +114,7 @@ const WheelOfFortune = ({ headTitle }) => {
         <title>{headTitle}</title>
         <meta property="og:title" content={headTitle} />
       </Helmet>
-      <h1 className="mb-4">Chiếc Nón Kỳ Diệu</h1>
+      <h1 className="mb-4 text-center">Chiếc Nón Kỳ Diệu</h1>
 
       {gameOver ? (
         <div className="text-center">
