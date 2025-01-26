@@ -20,9 +20,10 @@ const wheelItems = [
 ];
 
 const WheelOfFortune = ({ headTitle }) => {
+  let wordIndex = Math.floor(Math.random() * gameWords.length);
   // State hooks
-  const [word, setWord] = useState(gameWords[0].word);
-  const [clue, setClue] = useState(gameWords[0].clue);
+  const [word, setWord] = useState(gameWords[wordIndex].word);
+  const [clue, setClue] = useState(gameWords[wordIndex].clue);
   const [guessedLetters, setGuessedLetters] = useState([]);
   const [score, setScore] = useState(0);
   const [turns, setTurns] = useState(3);
