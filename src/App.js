@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import HistoryLessons from "./components/HistoryLessons";
 import Quiz from "./components/Quiz";
 import Timeline from "./components/Timeline";
+import WheelOfFortune from "./components/WheelOfFortune";
 
 const App = () => {
   return (
@@ -22,6 +23,12 @@ const App = () => {
           <Route
             path="/tien-trinh"
             element={<Timeline headTitle="Tiến trình - Lịch sử Việt Nam" />}
+          />
+          <Route
+            path="/chiec-non-ky-dieu"
+            element={
+              <WheelOfFortune headTitle="Chiếc nón kỳ diệu - Lịch sử Việt Nam" />
+            }
           />
           <Route
             path="/cau-do"
