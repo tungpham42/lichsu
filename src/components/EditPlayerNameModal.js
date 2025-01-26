@@ -1,13 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Modal, Button, Form } from "react-bootstrap";
 
 const EditPlayerNameModal = ({ show, onClose, currentName, onSubmit }) => {
   const [newName, setNewName] = useState(currentName);
+  const [error, setError] = useState("");
+
+  // Update newName whenever currentName changes
+  useEffect(() => {
+    setNewName(currentName);
+  }, [currentName]);
 
   const handleSubmit = () => {
     if (newName.trim()) {
       onSubmit(newName);
-      setNewName(""); // Reset the input field after submission
+      setError(""); // Reset the error message
+    }
+    if (!newName.trim()) {
+      setError("Vui lòng nhập tên mới");
+    }
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      handleSubmit();
     }
   };
 
@@ -21,8 +36,10 @@ const EditPlayerNameModal = ({ show, onClose, currentName, onSubmit }) => {
           type="text"
           value={newName}
           onChange={(e) => setNewName(e.target.value)}
+          onKeyDown={handleKeyDown}
           placeholder="Nhập tên mới"
         />
+        {error && <p className="text-danger">{error}</p>}
       </Modal.Body>
       <Modal.Footer>
         <Button variant="secondary" onClick={onClose}>

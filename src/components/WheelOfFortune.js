@@ -28,6 +28,7 @@ const WheelOfFortune = ({ headTitle }) => {
   const [showModal, setShowModal] = useState(false);
   const [message, setMessage] = useState("");
   const [letterToGuess, setLetterToGuess] = useState("");
+  const [error, setError] = useState("");
 
   // Player management
   const [players, setPlayers] = useState([]);
@@ -140,12 +141,17 @@ const WheelOfFortune = ({ headTitle }) => {
     setMessage("");
     setPlayers((prev) => prev.map((player) => ({ ...player, score: 0 })));
     setCurrentPlayerIndex(0);
+    setError("");
   };
 
   const addPlayer = () => {
     if (newPlayerName.trim()) {
       setPlayers((prev) => [...prev, { name: newPlayerName, score: 0 }]);
       setNewPlayerName("");
+      setError("");
+    }
+    if (!newPlayerName.trim()) {
+      setError("Tên người chơi không thể để trống!");
     }
   };
 
@@ -247,6 +253,7 @@ const WheelOfFortune = ({ headTitle }) => {
             </Col>
           </Row>
         </Form>
+        {error && <p className="text-danger">{error}</p>}
 
         <ul className="list-group">
           {players.map((player, index) => (
