@@ -168,6 +168,23 @@
   },
   {
     "id": 23,
+    "question": "Năm 1978, sự kiện nào đánh dấu việc Việt Nam bắt đầu chiến tranh chống Khmer Đỏ?",
+    "options": [
+      "Chiến dịch Tây Nguyên",
+      "Cuộc chiến tranh biên giới Tây Nam",
+      "Chiến tranh biên giới phía Bắc",
+      "Chiến dịch Hồ Chí Minh"
+    ],
+    "answer": "Cuộc chiến tranh biên giới Tây Nam"
+  },
+  {
+    "id": 24,
+    "question": "Chiến tranh bảo vệ hải đảo tại Trường Sa diễn ra vào năm nào?",
+    "options": ["1974", "1988", "1992", "1975"],
+    "answer": "1988"
+  },
+  {
+    "id": 25,
     "question": "Năm 1986, Đại hội Đảng lần thứ VI đã khởi xướng chính sách gì?",
     "options": [
       "Đổi mới",
@@ -178,13 +195,13 @@
     "answer": "Đổi mới"
   },
   {
-    "id": 24,
+    "id": 26,
     "question": "Chính sách Đổi mới năm 1986 tập trung vào lĩnh vực nào?",
     "options": ["Kinh tế", "Chính trị", "Quân sự", "Giáo dục"],
     "answer": "Kinh tế"
   },
   {
-    "id": 25,
+    "id": 27,
     "question": "Sự kiện nào diễn ra vào năm 1995, đánh dấu bước tiến lớn của Việt Nam trong hội nhập quốc tế?",
     "options": [
       "Gia nhập ASEAN",
@@ -195,13 +212,13 @@
     "answer": "Gia nhập ASEAN"
   },
   {
-    "id": 26,
+    "id": 28,
     "question": "Việt Nam gia nhập Tổ chức Thương mại Thế giới (WTO) vào năm nào?",
     "options": ["1995", "2000", "2007", "2010"],
     "answer": "2007"
   },
   {
-    "id": 27,
+    "id": 29,
     "question": "Hiến pháp năm 1992 của Việt Nam tập trung vào nội dung gì?",
     "options": [
       "Khẳng định nền kinh tế thị trường định hướng xã hội chủ nghĩa",
@@ -212,7 +229,7 @@
     "answer": "Khẳng định nền kinh tế thị trường định hướng xã hội chủ nghĩa"
   },
   {
-    "id": 28,
+    "id": 30,
     "question": "Năm 2010, sự kiện nào đánh dấu 1000 năm Thăng Long - Hà Nội?",
     "options": [
       "Khánh thành Lăng Chủ tịch Hồ Chí Minh",
@@ -223,25 +240,25 @@
     "answer": "Lễ hội 1000 năm Thăng Long"
   },
   {
-    "id": 29,
+    "id": 31,
     "question": "Hiệp định Đối tác Toàn diện và Tiến bộ xuyên Thái Bình Dương (CPTPP) được Việt Nam ký kết vào năm nào?",
     "options": ["2016", "2018", "2020", "2022"],
     "answer": "2018"
   },
   {
-    "id": 30,
+    "id": 32,
     "question": "Luật Biển Việt Nam được Quốc hội thông qua vào năm nào?",
     "options": ["2011", "2012", "2013", "2014"],
     "answer": "2012"
   },
   {
-    "id": 31,
+    "id": 33,
     "question": "Việt Nam đảm nhiệm vai trò Chủ tịch ASEAN lần thứ hai vào năm nào?",
     "options": ["2005", "2010", "2015", "2020"],
     "answer": "2020"
   },
   {
-    "id": 32,
+    "id": 34,
     "question": "Chương trình Chuyển đổi số quốc gia của Việt Nam bắt đầu từ năm nào?",
     "options": ["2019", "2020", "2021", "2022"],
     "answer": "2020"
