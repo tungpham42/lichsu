@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Button, Row, Col } from "react-bootstrap";
+import { Button, Row, Col, Form } from "react-bootstrap";
 import { Helmet } from "react-helmet";
 import gameWords from "../data/gameWords.json";
 import GuessLetterModal from "./GuessLetterModal";
+import EditPlayerNameModal from "./EditPlayerNameModal";
 
-// Define wheel items
 const wheelItems = [
   { label: "100", value: 100 },
   { label: "200", value: 200 },
@@ -21,18 +21,21 @@ const wheelItems = [
 
 const WheelOfFortune = ({ headTitle }) => {
   let wordIndex = Math.floor(Math.random() * gameWords.length);
-  // State hooks
   const [word, setWord] = useState(gameWords[wordIndex].word);
   const [clue, setClue] = useState(gameWords[wordIndex].clue);
   const [guessedLetters, setGuessedLetters] = useState([]);
-  const [score, setScore] = useState(0);
-  const [turns, setTurns] = useState(3);
   const [gameOver, setGameOver] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [message, setMessage] = useState("");
   const [letterToGuess, setLetterToGuess] = useState("");
 
-  // Get the word with guessed letters revealed
+  // Player management
+  const [players, setPlayers] = useState([]);
+  const [showEditModal, setShowEditModal] = useState(false);
+  const [selectedPlayerIndex, setSelectedPlayerIndex] = useState(null);
+  const [newPlayerName, setNewPlayerName] = useState("");
+  const [currentPlayerIndex, setCurrentPlayerIndex] = useState(0);
+
   const getMaskedWord = () => {
     return word
       .split("")
@@ -40,85 +43,157 @@ const WheelOfFortune = ({ headTitle }) => {
       .join(" ");
   };
 
-  // Check if the game is over (all letters guessed)
   useEffect(() => {
     if (!getMaskedWord().includes("_")) {
       setGameOver(true);
-      setMessage("Chúc mừng bạn đã đoán đúng hết từ!");
+      setMessage("Chúc mừng! Từ đã được đoán xong!");
     } // eslint-disable-next-line
-  }, [guessedLetters]); // Re-run when guessedLetters changes
+  }, [guessedLetters]);
 
-  // Handle the result of spinning the wheel
   const handleSpinResult = (result) => {
-    setMessage(
-      result.label === "Mất điểm"
-        ? "Oh no! Bạn đã bị mất hết điểm."
-        : result.label === "Mất lượt"
-        ? "Mất lượt rồi! Tiếp tục..."
-        : `Bạn quay được ${result.label} điểm.`
-    );
+    const currentPlayer = players[currentPlayerIndex];
+
+    if (!currentPlayer) {
+      setMessage("Lỗi: Không tìm thấy người chơi hiện tại.");
+      return;
+    }
 
     if (result.label === "Mất điểm") {
-      setScore(0);
+      setPlayers((prev) =>
+        prev.map((player, index) =>
+          index === currentPlayerIndex ? { ...player, score: 0 } : player
+        )
+      );
+      setMessage(`${currentPlayer.name} mất điểm!`);
     } else if (result.label === "Mất lượt") {
-      setTurns(turns - 1);
+      setMessage(`${currentPlayer.name} mất lượt!`);
+      nextPlayer();
     } else {
       setLetterToGuess(result.value);
+      setMessage(`${currentPlayer.name} quay được ${result.label} điểm!`);
     }
 
     setShowModal(true);
   };
 
-  // Start spinning the wheel
   const spinWheel = () => {
+    if (players.length === 0) {
+      setMessage("Vui lòng thêm ít nhất một người chơi trước khi bắt đầu!");
+      return;
+    }
+
     const result = wheelItems[Math.floor(Math.random() * wheelItems.length)];
     handleSpinResult(result);
   };
 
-  // Handle letter guess
   const handleGuessLetter = (letter) => {
+    const currentPlayer = players[currentPlayerIndex];
+
     if (letter && !guessedLetters.includes(letter)) {
       setGuessedLetters((prev) => [...prev, letter]);
 
       const isCorrectGuess = word.includes(letter);
       const letterCount = word.split("").filter((l) => l === letter).length;
       const scoreIncrement = isCorrectGuess ? letterCount * letterToGuess : 0;
-      setScore((prevScore) => prevScore + scoreIncrement);
+
+      setPlayers((prev) =>
+        prev.map((player, index) =>
+          index === currentPlayerIndex
+            ? { ...player, score: player.score + scoreIncrement }
+            : player
+        )
+      );
 
       setMessage(
         isCorrectGuess
-          ? `Chúc mừng! Bạn đã đoán đúng chữ "${letter}"`
-          : `Chữ "${letter}" không có trong từ.`
+          ? `Chúc mừng! ${currentPlayer.name} đoán đúng chữ "${letter}".`
+          : `${currentPlayer.name} đoán sai.`
       );
+
+      if (!isCorrectGuess) {
+        nextPlayer();
+      }
     } else {
-      setMessage("Bạn đã đoán chữ này rồi hoặc không nhập chữ.");
+      setMessage(
+        `${currentPlayer.name}, chữ này đã đoán rồi hoặc bạn chưa nhập chữ!`
+      );
     }
   };
 
-  // Restart the game
+  const nextPlayer = () => {
+    setCurrentPlayerIndex((prev) => (prev + 1) % players.length);
+  };
+
   const restartGame = () => {
-    setTurns(3);
-    setScore(0);
-    setGuessedLetters([]);
-    setGameOver(false);
-    setMessage("");
+    if (players.length === 0) {
+      setMessage(
+        "Vui lòng thêm ít nhất một người chơi trước khi khởi động lại trò chơi!"
+      );
+      return;
+    }
 
     const randomWord = gameWords[Math.floor(Math.random() * gameWords.length)];
     setWord(randomWord.word);
     setClue(randomWord.clue);
+    setGuessedLetters([]);
+    setGameOver(false);
+    setMessage("");
+    setPlayers((prev) => prev.map((player) => ({ ...player, score: 0 })));
+    setCurrentPlayerIndex(0);
+  };
+
+  const addPlayer = () => {
+    if (newPlayerName.trim()) {
+      setPlayers((prev) => [...prev, { name: newPlayerName, score: 0 }]);
+      setNewPlayerName("");
+    }
+  };
+
+  const removePlayer = (index) => {
+    setPlayers((prev) => prev.filter((_, i) => i !== index));
+    if (index === currentPlayerIndex && players.length > 1) {
+      nextPlayer(); // Skip to next player if the current player is removed
+    }
+  };
+
+  const updatePlayerName = (index, newName) => {
+    setPlayers((prevPlayers) =>
+      prevPlayers.map((player, i) =>
+        i === index ? { ...player, name: newName } : player
+      )
+    );
+  };
+
+  const handleEditButtonClick = (index) => {
+    setSelectedPlayerIndex(index);
+    setShowEditModal(true);
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      addPlayer();
+    }
   };
 
   return (
     <>
       <Helmet>
         <title>{headTitle}</title>
-        <meta property="og:title" content={headTitle} />
       </Helmet>
-      <h1 className="mb-4 text-center">Chiếc Nón Kỳ Diệu</h1>
+      <h1 className="text-center mb-4">Chiếc Nón Kỳ Diệu</h1>
 
       {gameOver ? (
         <div className="text-center">
-          <h4>Chúc mừng! Bạn đã hoàn thành trò chơi với {score} điểm!</h4>
+          <h4>
+            Trò chơi kết thúc! Người chơi thắng:{" "}
+            {
+              players.reduce(
+                (prev, current) =>
+                  prev.score > current.score ? prev : current,
+                players[0]
+              )?.name
+            }
+          </h4>
           <Button onClick={restartGame}>Chơi lại</Button>
         </div>
       ) : (
@@ -126,17 +201,19 @@ const WheelOfFortune = ({ headTitle }) => {
           <Row className="justify-content-center">
             <Col xs="auto">
               <h5>Gợi ý: {clue}</h5>
-              <h3 className="text-center">{getMaskedWord()}</h3>
+              <h3 className="text-center display-6">{getMaskedWord()}</h3>
             </Col>
           </Row>
+
           <Row className="justify-content-center mt-3">
             <Col xs="auto">
               <Button onClick={spinWheel}>Quay Nón</Button>
             </Col>
           </Row>
+
           <div className="mt-3 text-center">
-            <h4>Điểm của bạn: {score}</h4>
-            <h5>Lượt chơi còn lại: {turns}</h5>
+            <h4>Lượt chơi của: {players[currentPlayerIndex]?.name}</h4>
+            <h5>Điểm: {players[currentPlayerIndex]?.score}</h5>
           </div>
           {message && <p className="text-center mt-3">{message}</p>}
         </>
@@ -148,6 +225,61 @@ const WheelOfFortune = ({ headTitle }) => {
         onSubmit={handleGuessLetter}
         letterToGuess={letterToGuess}
         guessedLetters={guessedLetters}
+      />
+
+      <div className="mt-4 col-9 mx-auto">
+        <h4>Người chơi</h4>
+        <Form onSubmit={(e) => e.preventDefault()} className="mb-3">
+          <Row>
+            <Col xs={8}>
+              <Form.Control
+                type="text"
+                placeholder="Nhập tên người chơi"
+                value={newPlayerName}
+                onChange={(e) => setNewPlayerName(e.target.value)}
+                onKeyDown={handleKeyDown}
+              />
+            </Col>
+            <Col xs={4}>
+              <Button onClick={addPlayer} disabled={!newPlayerName.trim()}>
+                Thêm người chơi
+              </Button>
+            </Col>
+          </Row>
+        </Form>
+
+        <ul className="list-group">
+          {players.map((player, index) => (
+            <li
+              key={index}
+              className="list-group-item d-flex justify-content gap-3 align-items-center"
+            >
+              <span>
+                {player.name} - Điểm: {player.score}
+              </span>
+              <div className="position-absolute end-0 d-flex justify-content gap-2 py-2">
+                <Button
+                  variant="link"
+                  onClick={() => handleEditButtonClick(index)}
+                >
+                  Sửa
+                </Button>
+                <Button variant="link" onClick={() => removePlayer(index)}>
+                  Xóa
+                </Button>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <EditPlayerNameModal
+        show={showEditModal}
+        onClose={() => setShowEditModal(false)}
+        currentName={players[selectedPlayerIndex]?.name || ""}
+        onSubmit={(newName) => {
+          updatePlayerName(selectedPlayerIndex, newName);
+          setShowEditModal(false);
+        }}
       />
     </>
   );

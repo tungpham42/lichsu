@@ -14,7 +14,7 @@ const GuessLetterModal = ({
   const handleSubmit = () => {
     if (letter && letter.length === 1) {
       if (guessedLetters.includes(letter.toUpperCase())) {
-        setError("Bạn đã đoán chữ này rồi.");
+        setError("Đã đoán chữ này rồi.");
       } else {
         onSubmit(letter.toUpperCase(), letterToGuess); // Pass the letter and points to the parent
         resetForm(); // Clear the input and close the modal
