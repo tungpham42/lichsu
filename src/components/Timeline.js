@@ -10,7 +10,7 @@ const Timeline = ({ headTitle }) => {
         <title>{headTitle}</title>
         <meta property="og:title" content={headTitle} />
       </Helmet>
-      <h1 className="mb-4 text-center">Tiến trình Lịch sử Việt Nam</h1>
+      <h1 className="mb-4 text-center">Tiến Trình Lịch sử Việt Nam</h1>
       {timelineData.map((item, index) => (
         <Row
           key={item.id}

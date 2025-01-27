@@ -45,7 +45,7 @@ const Header = () => {
               }`}
               to="/tien-trinh"
             >
-              Tiến trình
+              Tiến Trình
             </Link>
           </Nav.Item>
           <Nav.Item>
@@ -55,7 +55,7 @@ const Header = () => {
               }`}
               to="/chiec-non-ky-dieu"
             >
-              Chiếc nón kỳ diệu
+              Chiếc Nón Kỳ Diệu
             </Link>
           </Nav.Item>
           <Nav.Item>
