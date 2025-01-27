@@ -59,11 +59,6 @@ const WheelOfFortune = ({ headTitle }) => {
 
     const currentPlayer = players[currentPlayerIndex];
 
-    if (!currentPlayer) {
-      setMessage("Lỗi: Không tìm thấy người chơi hiện tại.");
-      return;
-    }
-
     if (result.label === "Mất điểm") {
       setPlayers((prev) =>
         prev.map((player, index) =>
@@ -99,11 +94,6 @@ const WheelOfFortune = ({ headTitle }) => {
     }
 
     const currentPlayer = players[currentPlayerIndex];
-
-    if (!currentPlayer) {
-      setMessage("Lỗi: Không tìm thấy người chơi hiện tại.");
-      return;
-    }
 
     if (letter && !guessedLetters.includes(letter)) {
       setGuessedLetters((prev) => [...prev, letter]);
