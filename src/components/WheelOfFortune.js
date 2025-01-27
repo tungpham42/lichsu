@@ -20,7 +20,7 @@ const wheelItems = [
 ];
 
 const WheelOfFortune = ({ headTitle }) => {
-  let wordIndex = Math.floor(Math.random() * gameWords.length);
+  const wordIndex = Math.floor(Math.random() * gameWords.length);
   const [word, setWord] = useState(gameWords[wordIndex].word);
   const [clue, setClue] = useState(gameWords[wordIndex].clue);
   const [guessedLetters, setGuessedLetters] = useState([]);
@@ -52,6 +52,11 @@ const WheelOfFortune = ({ headTitle }) => {
   }, [guessedLetters]);
 
   const handleSpinResult = (result) => {
+    if (players.length === 0) {
+      setMessage("Lỗi: Không có người chơi!");
+      return;
+    }
+
     const currentPlayer = players[currentPlayerIndex];
 
     if (!currentPlayer) {
@@ -88,7 +93,17 @@ const WheelOfFortune = ({ headTitle }) => {
   };
 
   const handleGuessLetter = (letter) => {
+    if (players.length === 0) {
+      setMessage("Lỗi: Không có người chơi!");
+      return;
+    }
+
     const currentPlayer = players[currentPlayerIndex];
+
+    if (!currentPlayer) {
+      setMessage("Lỗi: Không tìm thấy người chơi hiện tại.");
+      return;
+    }
 
     if (letter && !guessedLetters.includes(letter)) {
       setGuessedLetters((prev) => [...prev, letter]);
@@ -233,11 +248,11 @@ const WheelOfFortune = ({ headTitle }) => {
         guessedLetters={guessedLetters}
       />
 
-      <div className="mt-4 col-10 mx-auto">
+      <div className="mt-4 col-8 mx-auto">
         <h4>Người chơi</h4>
-        <Form onSubmit={(e) => e.preventDefault()} className="mb-3">
+        <Form onSubmit={(e) => e.preventDefault()} className="mb-3 mx-auto">
           <Row>
-            <Col xs={8}>
+            <Col xl={11} lg={11} md={10} sm={8} xs={12}>
               <Form.Control
                 type="text"
                 placeholder="Nhập tên người chơi"
@@ -246,7 +261,7 @@ const WheelOfFortune = ({ headTitle }) => {
                 onKeyDown={handleKeyDown}
               />
             </Col>
-            <Col xs={2}>
+            <Col xl={1} lg={1} md={2} sm={4} xs={12}>
               <Button onClick={addPlayer} disabled={!newPlayerName.trim()}>
                 Thêm
               </Button>
