@@ -226,7 +226,7 @@ const WheelOfFortune = ({ headTitle }) => {
             <h4>Lượt chơi của: {players[currentPlayerIndex]?.name}</h4>
             <h5>Điểm: {players[currentPlayerIndex]?.score}</h5>
           </div>
-          {message && <p className="text-center mt-3">{message}</p>}
+          {message && <p className="text-center mt-3 lead">{message}</p>}
         </>
       )}
 
