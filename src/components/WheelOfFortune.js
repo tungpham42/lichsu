@@ -197,7 +197,7 @@ const WheelOfFortune = ({ headTitle }) => {
         <div className="text-center">
           <h3 className="text-center display-6">{getMaskedWord()}</h3>
           <h4>
-            Trò chơi kết thúc! Người chơi thắng:{" "}
+            Trò chơi kết thúc! Người chiến thắng:{" "}
             {
               players.reduce(
                 (prev, current) =>
