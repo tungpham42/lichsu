@@ -18,56 +18,43 @@ const Header = () => {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto">
-          <Nav.Item>
-            <Link
-              className={`nav-link ${
-                location.pathname === "/" ? "active" : ""
-              }`}
-              to="/"
-            >
-              Trang Chủ
-            </Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Link
-              className={`nav-link ${
-                location.pathname === "/bai-hoc" ? "active" : ""
-              }`}
-              to="/bai-hoc"
-            >
-              Bài Học
-            </Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Link
-              className={`nav-link ${
-                location.pathname === "/tien-trinh" ? "active" : ""
-              }`}
-              to="/tien-trinh"
-            >
-              Tiến Trình
-            </Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Link
-              className={`nav-link ${
-                location.pathname === "/chiec-non-ky-dieu" ? "active" : ""
-              }`}
-              to="/chiec-non-ky-dieu"
-            >
-              Chiếc Nón Kỳ Diệu
-            </Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Link
-              className={`nav-link ${
-                location.pathname === "/cau-do" ? "active" : ""
-              }`}
-              to="/cau-do"
-            >
-              Câu Đố
-            </Link>
-          </Nav.Item>
+          <Nav.Link
+            as={Link}
+            className={location.pathname === "/" ? "active" : ""}
+            to="/"
+          >
+            Trang Chủ
+          </Nav.Link>
+          <Nav.Link
+            as={Link}
+            className={location.pathname === "/bai-hoc" ? "active" : ""}
+            to="/bai-hoc"
+          >
+            Bài Học
+          </Nav.Link>
+          <Nav.Link
+            as={Link}
+            className={location.pathname === "/tien-trinh" ? "active" : ""}
+            to="/tien-trinh"
+          >
+            Tiến Trình
+          </Nav.Link>
+          <Nav.Link
+            as={Link}
+            className={
+              location.pathname === "/chiec-non-ky-dieu" ? "active" : ""
+            }
+            to="/chiec-non-ky-dieu"
+          >
+            Chiếc Nón Kỳ Diệu
+          </Nav.Link>
+          <Nav.Link
+            as={Link}
+            className={location.pathname === "/cau-do" ? "active" : ""}
+            to="/cau-do"
+          >
+            Câu Đố
+          </Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
