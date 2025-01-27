@@ -233,11 +233,11 @@ const WheelOfFortune = ({ headTitle }) => {
         guessedLetters={guessedLetters}
       />
 
-      <div className="mt-4 col-12 mx-auto">
+      <div className="mt-4 col-10 mx-auto">
         <h4>Người chơi</h4>
         <Form onSubmit={(e) => e.preventDefault()} className="mb-3">
           <Row>
-            <Col xs={10}>
+            <Col xs={8}>
               <Form.Control
                 type="text"
                 placeholder="Nhập tên người chơi"
