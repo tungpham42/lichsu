@@ -252,7 +252,7 @@ const WheelOfFortune = ({ headTitle }) => {
         <h4>Người chơi</h4>
         <Form onSubmit={(e) => e.preventDefault()} className="mb-3 mx-auto">
           <Row>
-            <Col xl={11} lg={11} md={10} sm={8} xs={12}>
+            <Col xl={10} lg={10} md={10} sm={8} xs={12}>
               <Form.Control
                 type="text"
                 placeholder="Nhập tên người chơi"
@@ -261,7 +261,7 @@ const WheelOfFortune = ({ headTitle }) => {
                 onKeyDown={handleKeyDown}
               />
             </Col>
-            <Col xl={1} lg={1} md={2} sm={4} xs={12}>
+            <Col xl={2} lg={2} md={2} sm={4} xs={12}>
               <Button onClick={addPlayer} disabled={!newPlayerName.trim()}>
                 Thêm
               </Button>
