@@ -7,7 +7,7 @@ const Survey = ({ headTitle }) => {
       <Helmet>
         <title>{headTitle}</title>
       </Helmet>
-      <h1 className="text-center mb-4">Chiếc Nón Kỳ Diệu</h1>
+      <h1 className="text-center mb-4">Khảo Sát</h1>
       <div className="google-form-container">
         <iframe
           src="https://docs.google.com/forms/d/e/1FAIpQLSetfremKqpUDkeJNcqJa6dvI403cs9Y66E7jZYO2J41HKs74A/viewform?embedded=true"
