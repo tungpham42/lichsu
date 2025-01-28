@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Button, Card, Alert } from "react-bootstrap";
 import questions from "../data/questions.json";
-import { Helmet } from "react-helmet";
 
 // Helper function to shuffle an array
 const shuffleArray = (array) => {
@@ -13,7 +12,7 @@ const shuffleArray = (array) => {
   return shuffledArray;
 };
 
-const Quiz = ({ headTitle }) => {
+const Quiz = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [showResult, setShowResult] = useState(false);
@@ -50,10 +49,6 @@ const Quiz = ({ headTitle }) => {
 
   return (
     <>
-      <Helmet>
-        <title>{headTitle}</title>
-        <meta property="og:title" content={headTitle} />
-      </Helmet>
       <h1 className="mb-4 text-center">Câu Đố Lịch Sử</h1>
       {showResult ? (
         <Card className="shadow-lg">

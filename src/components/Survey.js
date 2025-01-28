@@ -1,12 +1,8 @@
 import React from "react";
-import { Helmet } from "react-helmet";
 
-const Survey = ({ headTitle }) => {
+const Survey = () => {
   return (
     <>
-      <Helmet>
-        <title>{headTitle}</title>
-      </Helmet>
       <h1 className="text-center mb-4">Khảo Sát</h1>
       <div className="google-form-container">
         <iframe

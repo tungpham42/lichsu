@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { Row, Col, Card, Button, Modal } from "react-bootstrap";
 import lessons from "../data/lessons.json";
-import { Helmet } from "react-helmet";
 
-function HistoryLessons({ headTitle }) {
+function HistoryLessons() {
   const [showLessonModal, setShowLessonModal] = useState(false);
   const [showVideoModal, setShowVideoModal] = useState(false);
   const [currentLesson, setCurrentLesson] = useState(null);
@@ -23,10 +22,6 @@ function HistoryLessons({ headTitle }) {
 
   return (
     <>
-      <Helmet>
-        <title>{headTitle}</title>
-        <meta property="og:title" content={headTitle} />
-      </Helmet>
       <h1 className="mb-4 text-center">Bài Học Lịch Sử</h1>
       <Row>
         {lessons.map((lesson) => (

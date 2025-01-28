@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Button, Row, Col, Form } from "react-bootstrap";
-import { Helmet } from "react-helmet";
 import gameWords from "../data/gameWords.json";
 import GuessLetterModal from "./GuessLetterModal";
 import EditPlayerNameModal from "./EditPlayerNameModal";
@@ -19,7 +18,7 @@ const wheelItems = [
   { label: "Mất lượt", value: 0 },
 ];
 
-const WheelOfFortune = ({ headTitle }) => {
+const WheelOfFortune = () => {
   const wordIndex = Math.floor(Math.random() * gameWords.length);
   const [word, setWord] = useState(gameWords[wordIndex].word);
   const [clue, setClue] = useState(gameWords[wordIndex].clue);
@@ -188,11 +187,7 @@ const WheelOfFortune = ({ headTitle }) => {
 
   return (
     <>
-      <Helmet>
-        <title>{headTitle}</title>
-      </Helmet>
       <h1 className="text-center mb-4">Chiếc Nón Kỳ Diệu</h1>
-
       {gameOver ? (
         <div className="text-center">
           <h3 className="text-center display-6">{getMaskedWord()}</h3>

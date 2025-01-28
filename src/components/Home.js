@@ -1,14 +1,9 @@
 import React from "react";
 import { Row, Col, Card } from "react-bootstrap";
-import { Helmet } from "react-helmet";
 
-const Home = ({ headTitle }) => {
+const Home = () => {
   return (
     <>
-      <Helmet>
-        <title>{headTitle}</title>
-        <meta property="og:title" content={headTitle} />
-      </Helmet>
       <h1 className="mb-4 text-center">Chào mừng đến với Lịch Sử Việt Nam</h1>
       <Row>
         <Col>

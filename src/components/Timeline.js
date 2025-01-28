@@ -1,15 +1,10 @@
 import React from "react";
 import { Row, Col, Card } from "react-bootstrap";
 import { timelineData } from "../data/timelines";
-import { Helmet } from "react-helmet";
 
-const Timeline = ({ headTitle }) => {
+const Timeline = () => {
   return (
     <>
-      <Helmet>
-        <title>{headTitle}</title>
-        <meta property="og:title" content={headTitle} />
-      </Helmet>
       <h1 className="mb-4 text-center">Tiến Trình Lịch sử Việt Nam</h1>
       {timelineData.map((item, index) => (
         <Row
