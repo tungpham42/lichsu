@@ -253,7 +253,11 @@ const WheelOfFortune = ({ headTitle }) => {
               />
             </Col>
             <Col xl={2} lg={2} md={2} sm={4} xs={12} className="mt-2 mt-sm-0">
-              <Button onClick={addPlayer} disabled={!newPlayerName.trim()}>
+              <Button
+                variant="success"
+                onClick={addPlayer}
+                disabled={!newPlayerName.trim()}
+              >
                 Thêm
               </Button>
             </Col>
