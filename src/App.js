@@ -6,6 +6,7 @@ import HistoryLessons from "./components/HistoryLessons";
 import Quiz from "./components/Quiz";
 import Timeline from "./components/Timeline";
 import WheelOfFortune from "./components/WheelOfFortune";
+import Survey from "./components/Survey";
 
 const App = () => {
   return (
@@ -33,6 +34,10 @@ const App = () => {
           <Route
             path="/cau-do"
             element={<Quiz headTitle="Câu đố - Lịch sử Việt Nam" />}
+          />
+          <Route
+            path="/khao-sat"
+            element={<Survey headTitle="Khảo sát - Lịch sử Việt Nam" />}
           />
         </Route>
       </Routes>

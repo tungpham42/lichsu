@@ -55,6 +55,13 @@ const Header = () => {
           >
             Câu Đố
           </Nav.Link>
+          <Nav.Link
+            as={Link}
+            className={location.pathname === "/khao-sat" ? "active" : ""}
+            to="/khao-sat"
+          >
+            Khảo Sát
+          </Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
