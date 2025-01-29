@@ -5,17 +5,18 @@ import GuessLetterModal from "./GuessLetterModal";
 import EditPlayerNameModal from "./EditPlayerNameModal";
 
 const wheelItems = [
-  { label: "100", value: 100 },
-  { label: "200", value: 200 },
-  { label: "300", value: 300 },
-  { label: "400", value: 400 },
-  { label: "500", value: 500 },
-  { label: "600", value: 600 },
-  { label: "700", value: 700 },
-  { label: "800", value: 800 },
-  { label: "900", value: 900 },
-  { label: "Mất điểm", value: 0 },
-  { label: "Mất lượt", value: 0 },
+  { label: "100", value: 100, color: "#FF5733" },
+  { label: "200", value: 200, color: "#FFBD33" },
+  { label: "300", value: 300, color: "#FFDA33" },
+  { label: "400", value: 400, color: "#33FF57" },
+  { label: "500", value: 500, color: "#33FFBD" },
+  { label: "600", value: 600, color: "#33DAFF" },
+  { label: "700", value: 700, color: "#5733FF" },
+  { label: "800", value: 800, color: "#BD33FF" },
+  { label: "900", value: 900, color: "#FF33A1" },
+  { label: "1000", value: 1000, color: "#FF3333" },
+  { label: "Mất điểm", value: 0, color: "#808080" },
+  { label: "Mất lượt", value: 0, color: "#C0C0C0" },
 ];
 
 const WheelOfFortune = () => {
