@@ -215,7 +215,9 @@ const WheelOfFortune = () => {
 
           <Row className="justify-content-center mt-3">
             <Col xs="auto">
-              <Button onClick={spinWheel}>Quay Nón</Button>
+              <Button size="lg" onClick={spinWheel}>
+                Quay Nón
+              </Button>
             </Col>
           </Row>
 
