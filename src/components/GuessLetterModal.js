@@ -15,7 +15,7 @@ const GuessLetterModal = ({
   const handleSubmit = () => {
     if (letter && letter.length === 1) {
       if (guessedLetters.includes(letter.toUpperCase())) {
-        setError("Đã đoán chữ này rồi.");
+        setError('Đã đoán chữ "' + letter.toUpperCase() + '" rồi.');
       } else {
         onSubmit(letter.toUpperCase(), letterToGuess); // Pass the letter and points to the parent
         resetForm(); // Clear the input and close the modal
@@ -35,6 +35,9 @@ const GuessLetterModal = ({
     if (e.key === "Enter") {
       handleSubmit();
     }
+    if (e.key === " ") {
+      e.preventDefault(); // Disable Spacebar
+    }
   };
 
   return (
@@ -45,7 +48,7 @@ const GuessLetterModal = ({
       <Modal.Body>
         <Form.Control
           type="text"
-          value={letter}
+          value={letter.toUpperCase()}
           onChange={(e) => setLetter(e.target.value)}
           onKeyDown={handleKeyDown}
           maxLength="1"
