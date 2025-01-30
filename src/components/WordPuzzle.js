@@ -4,7 +4,7 @@ import gameWords from "../data/gameWords.json";
 import GuessLetterModal from "./GuessLetterModal";
 import EditPlayerNameModal from "./EditPlayerNameModal";
 
-const wheelItems = [
+const prizes = [
   { label: "100", value: 100, color: "#FF5733" },
   { label: "200", value: 200, color: "#FFBD33" },
   { label: "300", value: 300, color: "#FFDA33" },
@@ -51,12 +51,12 @@ const WordPuzzle = () => {
     } // eslint-disable-next-line
   }, [guessedLetters]);
 
-  const spinWheel = () => {
+  const startGame = () => {
     if (players.length === 0) {
       setMessage("Vui lòng thêm ít nhất một người chơi trước khi bắt đầu!");
       return;
     }
-    const result = wheelItems[Math.floor(Math.random() * wheelItems.length)];
+    const result = prizes[Math.floor(Math.random() * prizes.length)];
     const currentPlayer = players[currentPlayerIndex];
     if (result.label === "Mất điểm") {
       setPlayers((prev) =>
@@ -204,7 +204,7 @@ const WordPuzzle = () => {
 
           <Row className="justify-content-center mt-3">
             <Col xs="auto">
-              <Button size="lg" onClick={spinWheel}>
+              <Button size="lg" onClick={startGame}>
                 Bắt đầu
               </Button>
             </Col>

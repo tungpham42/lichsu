@@ -46,7 +46,7 @@ const App = () => {
             index
             element={
               <>
-                <DynamicTitle title="Trang chủ - Lịch sử Việt Nam" />
+                <DynamicTitle title="Trang Chủ - Lịch sử Việt Nam" />
                 <Home />
               </>
             }
@@ -55,7 +55,7 @@ const App = () => {
             path="/bai-hoc"
             element={
               <>
-                <DynamicTitle title="Bài học - Lịch sử Việt Nam" />
+                <DynamicTitle title="Bài Học - Lịch sử Việt Nam" />
                 <HistoryLessons />
               </>
             }
@@ -64,7 +64,7 @@ const App = () => {
             path="/tien-trinh"
             element={
               <>
-                <DynamicTitle title="Tiến trình - Lịch sử Việt Nam" />
+                <DynamicTitle title="Tiến Trình - Lịch sử Việt Nam" />
                 <Timeline />
               </>
             }
@@ -73,7 +73,7 @@ const App = () => {
             path="/o-chu"
             element={
               <>
-                <DynamicTitle title="Chiếc nón kỳ diệu - Lịch sử Việt Nam" />
+                <DynamicTitle title="Ô Chữ - Lịch sử Việt Nam" />
                 <WordPuzzle />
               </>
             }
@@ -82,7 +82,7 @@ const App = () => {
             path="/cau-do"
             element={
               <>
-                <DynamicTitle title="Câu đố - Lịch sử Việt Nam" />
+                <DynamicTitle title="Câu Đố - Lịch sử Việt Nam" />
                 <Quiz />
               </>
             }
@@ -91,7 +91,7 @@ const App = () => {
             path="/khao-sat"
             element={
               <>
-                <DynamicTitle title="Khảo sát - Lịch sử Việt Nam" />
+                <DynamicTitle title="Khảo Sát - Lịch sử Việt Nam" />
                 <Survey />
               </>
             }
