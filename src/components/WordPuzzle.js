@@ -71,7 +71,7 @@ const WordPuzzle = () => {
 
   const startGame = () => {
     if (players.length === 0) {
-      setMessage("Vui lòng thêm ít nhất một người chơi trước khi bắt đầu!");
+      setError("Vui lòng thêm ít nhất một người chơi trước khi bắt đầu!");
       return;
     }
     const result = prizes[Math.floor(Math.random() * prizes.length)];
@@ -100,7 +100,7 @@ const WordPuzzle = () => {
 
   const handleGuessLetter = (letter) => {
     if (players.length === 0) {
-      setMessage("Vui lòng thêm ít nhất một người chơi trước khi đoán từ!");
+      setError("Vui lòng thêm ít nhất một người chơi trước khi đoán từ!");
       return;
     }
 
@@ -144,7 +144,7 @@ const WordPuzzle = () => {
 
   const restartGame = () => {
     if (players.length === 0) {
-      setMessage(
+      setError(
         "Vui lòng thêm ít nhất một người chơi trước khi khởi động lại trò chơi!"
       );
       return;
@@ -282,8 +282,8 @@ const WordPuzzle = () => {
         currentPlayerName={players[currentPlayerIndex]?.name}
       />
 
-      <div className="mt-4 col-lg-6 col-md-8 col-sm-10 col-xs-12 mx-auto">
-        <h4>Người chơi</h4>
+      <div className="mt-4 col-lg-6 col-md-8 col-sm-10 col-xs-12 mx-auto shadow-lg p-4 rounded">
+        <h4>Danh sách người chơi</h4>
         <Form onSubmit={(e) => e.preventDefault()} className="mb-3 mx-auto">
           <Row>
             <Col>
@@ -314,7 +314,7 @@ const WordPuzzle = () => {
           {players.map((player, index) => (
             <li
               key={index}
-              className="list-group-item d-flex justify-content gap-3 align-items-center"
+              className="ps-0 list-group-item d-flex justify-content gap-3 align-items-center"
             >
               <span>
                 {player.name} - Điểm: {player.score}

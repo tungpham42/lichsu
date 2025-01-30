@@ -12,7 +12,7 @@ const Timeline = () => {
           className={`mb-4 ${index % 2 === 0 ? "flex-row-reverse" : ""}`}
         >
           <Col md={6}>
-            <Card className="shadow">
+            <Card className="shadow-lg">
               <Card.Body>
                 <Card.Title>{item.title}</Card.Title>
                 <Card.Subtitle className="mb-2 text-muted">

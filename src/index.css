@@ -24,7 +24,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-.card {
+.card,
+.list-group-item {
   border: none !important;
 }
 .timeline-circle {
