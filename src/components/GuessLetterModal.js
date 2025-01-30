@@ -38,7 +38,7 @@ const GuessLetterModal = ({
 
   return (
     <Modal show={show} onHide={onClose}>
-      <Modal.Header closeButton>
+      <Modal.Header>
         <Modal.Title>Nhập chữ cái bạn muốn đoán</Modal.Title>
       </Modal.Header>
       <Modal.Body>
@@ -53,9 +53,6 @@ const GuessLetterModal = ({
         {error && <p className="text-danger">{error}</p>}
       </Modal.Body>
       <Modal.Footer>
-        <Button variant="secondary" onClick={onClose}>
-          Đóng
-        </Button>
         <Button variant="primary" onClick={handleSubmit}>
           Đoán
         </Button>
