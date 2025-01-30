@@ -163,21 +163,38 @@ const WordPuzzle = () => {
   };
 
   const addPlayer = () => {
-    if (newPlayerName.trim()) {
-      setPlayers((prev) => [...prev, { name: newPlayerName, score: 0 }]);
-      setNewPlayerName("");
-      setError("");
-    }
-    if (!newPlayerName.trim()) {
+    const trimmedName = newPlayerName.trim();
+    if (!trimmedName) {
       setError("Tên người chơi không thể để trống!");
+      return;
     }
+
+    setPlayers((prev) => [...prev, { name: trimmedName, score: 0 }]);
+    setNewPlayerName("");
+    setError("");
   };
 
   const removePlayer = (index) => {
-    setPlayers((prev) => prev.filter((_, i) => i !== index));
-    if (index === currentPlayerIndex && players.length > 1) {
-      nextPlayer(); // Skip to next player if the current player is removed
-    }
+    setPlayers((prevPlayers) => {
+      const newPlayers = prevPlayers.filter((_, i) => i !== index);
+
+      if (newPlayers.length === 0) {
+        setCurrentPlayerIndex(0); // Reset if no players remain
+      } else {
+        setCurrentPlayerIndex((prevIndex) => {
+          if (index === prevIndex) {
+            // Move to the next available player or wrap around
+            return prevIndex >= newPlayers.length ? 0 : prevIndex;
+          } else if (index < prevIndex) {
+            // Shift index back if a player before current one was removed
+            return prevIndex - 1;
+          }
+          return prevIndex; // Keep the same if removing a player after the current one
+        });
+      }
+
+      return newPlayers;
+    });
   };
 
   const updatePlayerName = (index, newName) => {
