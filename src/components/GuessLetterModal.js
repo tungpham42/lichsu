@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Modal, Button, Form } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
 
 const GuessLetterModal = ({
   show,
@@ -17,8 +19,8 @@ const GuessLetterModal = ({
       if (guessedLetters.includes(letter.toUpperCase())) {
         setError('Đã đoán chữ "' + letter.toUpperCase() + '" rồi.');
       } else {
-        onSubmit(letter.toUpperCase(), letterToGuess); // Pass the letter and points to the parent
-        resetForm(); // Clear the input and close the modal
+        onSubmit(letter.toUpperCase(), letterToGuess);
+        resetForm();
       }
     } else {
       setError("Vui lòng nhập một chữ cái hợp lệ.");
@@ -26,9 +28,9 @@ const GuessLetterModal = ({
   };
 
   const resetForm = () => {
-    setLetter(""); // Clear the input field
-    setError(""); // Reset error message
-    onClose(); // Close the modal
+    setLetter("");
+    setError("");
+    onClose();
   };
 
   const handleKeyDown = (e) => {
@@ -36,7 +38,7 @@ const GuessLetterModal = ({
       handleSubmit();
     }
     if (e.key === " ") {
-      e.preventDefault(); // Disable Spacebar
+      e.preventDefault();
     }
   };
 
@@ -54,10 +56,11 @@ const GuessLetterModal = ({
           maxLength="1"
           autoFocus
         />
-        {error && <p className="text-danger">{error}</p>}
+        {error && <p className="text-danger mt-2">{error}</p>}
       </Modal.Body>
       <Modal.Footer>
         <Button variant="primary" onClick={handleSubmit}>
+          <FontAwesomeIcon icon={faCheck} className="me-2" />
           Đoán
         </Button>
       </Modal.Footer>

@@ -3,6 +3,14 @@ import { Button, Row, Col, Form } from "react-bootstrap";
 import gameWords from "../data/gameWords.json";
 import GuessLetterModal from "./GuessLetterModal";
 import EditPlayerNameModal from "./EditPlayerNameModal";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faEdit,
+  faTrash,
+  faRedo,
+  faPlay,
+  faAdd,
+} from "@fortawesome/free-solid-svg-icons";
 
 const prizes = [
   { label: "100", value: 100, color: "#FF5733" },
@@ -116,7 +124,7 @@ const WordPuzzle = () => {
 
       setMessage(
         isCorrectGuess
-          ? `Chúc mừng! ${currentPlayer.name} đoán đúng chữ "${letter}", đã xuất hiện ${letterCount} lần.`
+          ? `Chúc mừng! ${currentPlayer.name} đoán đúng chữ "${letter}", chữ này đã xuất hiện ${letterCount} lần.`
           : `${currentPlayer.name} đoán sai.`
       );
 
@@ -208,7 +216,7 @@ const WordPuzzle = () => {
             }
           </h4>
           <Button size="lg" onClick={restartGame}>
-            Chơi lại
+            <FontAwesomeIcon icon={faRedo} className="me-2" /> Chơi lại
           </Button>
         </div>
       ) : (
@@ -223,6 +231,7 @@ const WordPuzzle = () => {
           <Row className="justify-content-center mt-3">
             <Col xs="auto">
               <Button size="lg" onClick={startGame}>
+                <FontAwesomeIcon icon={faPlay} className="me-2" />
                 Bắt đầu
               </Button>
             </Col>
@@ -248,12 +257,13 @@ const WordPuzzle = () => {
         currentPlayerName={players[currentPlayerIndex]?.name}
       />
 
-      <div className="mt-4 col-8 mx-auto">
+      <div className="mt-4 col-lg-6 col-md-8 col-sm-10 col-xs-12 mx-auto">
         <h4>Người chơi</h4>
         <Form onSubmit={(e) => e.preventDefault()} className="mb-3 mx-auto">
           <Row>
-            <Col xl={10} lg={10} md={10} sm={8} xs={12}>
+            <Col>
               <Form.Control
+                size="lg"
                 type="text"
                 placeholder="Nhập tên người chơi"
                 value={newPlayerName}
@@ -263,11 +273,12 @@ const WordPuzzle = () => {
             </Col>
             <Col xl={2} lg={2} md={2} sm={4} xs={12} className="mt-2 mt-sm-0">
               <Button
+                size="lg"
                 variant="success"
                 onClick={addPlayer}
                 disabled={!newPlayerName.trim()}
               >
-                Thêm
+                <FontAwesomeIcon icon={faAdd} />
               </Button>
             </Col>
           </Row>
@@ -285,13 +296,20 @@ const WordPuzzle = () => {
               </span>
               <div className="position-absolute end-0 d-flex justify-content gap-2 py-2">
                 <Button
-                  variant="link"
+                  size="sm"
+                  variant="warning"
+                  className="me-0 my-2"
                   onClick={() => handleEditButtonClick(index)}
                 >
-                  Sửa
+                  <FontAwesomeIcon icon={faEdit} />
                 </Button>
-                <Button variant="link" onClick={() => removePlayer(index)}>
-                  Xóa
+                <Button
+                  size="sm"
+                  variant="danger"
+                  className="me-2 my-2"
+                  onClick={() => removePlayer(index)}
+                >
+                  <FontAwesomeIcon icon={faTrash} />
                 </Button>
               </div>
             </li>

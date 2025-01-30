@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Row, Col, Card, Button, Modal } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBook, faVideo, faTimes } from "@fortawesome/free-solid-svg-icons";
 import lessons from "../data/lessons.json";
 
 function HistoryLessons() {
@@ -35,6 +37,7 @@ function HistoryLessons() {
                     variant="primary"
                     onClick={() => handleLessonShow(lesson)}
                   >
+                    <FontAwesomeIcon icon={faBook} className="me-2" />
                     Xem Chi Tiết
                   </Button>
                   {lesson.youtube_id && (
@@ -42,6 +45,7 @@ function HistoryLessons() {
                       variant="success"
                       onClick={() => handleVideoShow(lesson)}
                     >
+                      <FontAwesomeIcon icon={faVideo} className="me-2" />
                       Xem Video
                     </Button>
                   )}
@@ -83,6 +87,7 @@ function HistoryLessons() {
           </Modal.Body>
           <Modal.Footer>
             <Button variant="secondary" onClick={handleLessonClose}>
+              <FontAwesomeIcon icon={faTimes} className="me-2" />
               Đóng
             </Button>
           </Modal.Footer>
@@ -109,6 +114,7 @@ function HistoryLessons() {
           </Modal.Body>
           <Modal.Footer>
             <Button variant="secondary" onClick={handleVideoClose}>
+              <FontAwesomeIcon icon={faTimes} className="me-2" />
               Đóng
             </Button>
           </Modal.Footer>

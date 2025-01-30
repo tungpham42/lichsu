@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Modal, Button, Form } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimes, faSave } from "@fortawesome/free-solid-svg-icons";
 
 const EditPlayerNameModal = ({ show, onClose, currentName, onSubmit }) => {
   const [newName, setNewName] = useState(currentName);
@@ -14,8 +16,7 @@ const EditPlayerNameModal = ({ show, onClose, currentName, onSubmit }) => {
     if (newName.trim()) {
       onSubmit(newName);
       setError(""); // Reset the error message
-    }
-    if (!newName.trim()) {
+    } else {
       setError("Vui lòng nhập tên mới");
     }
   };
@@ -38,14 +39,17 @@ const EditPlayerNameModal = ({ show, onClose, currentName, onSubmit }) => {
           onChange={(e) => setNewName(e.target.value)}
           onKeyDown={handleKeyDown}
           placeholder="Nhập tên mới"
+          autoFocus
         />
-        {error && <p className="text-danger">{error}</p>}
+        {error && <p className="text-danger mt-2">{error}</p>}
       </Modal.Body>
       <Modal.Footer>
         <Button variant="secondary" onClick={onClose}>
+          <FontAwesomeIcon icon={faTimes} className="me-2" />
           Hủy
         </Button>
         <Button variant="primary" onClick={handleSubmit}>
+          <FontAwesomeIcon icon={faSave} className="me-2" />
           Lưu
         </Button>
       </Modal.Footer>
