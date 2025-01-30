@@ -43,7 +43,7 @@ const GuessLetterModal = ({
   };
 
   return (
-    <Modal show={show} onHide={onClose} backdrop="static">
+    <Modal show={show} onHide={onClose} backdrop="static" centered>
       <Modal.Header>
         <Modal.Title>Nhập chữ cái {currentPlayerName} muốn đoán</Modal.Title>
       </Modal.Header>

@@ -49,7 +49,7 @@ const EditPlayerNameModal = ({
   };
 
   return (
-    <Modal show={show} onHide={onClose}>
+    <Modal show={show} onHide={onClose} centered>
       <Modal.Header closeButton>
         <Modal.Title>Sửa tên người chơi</Modal.Title>
       </Modal.Header>

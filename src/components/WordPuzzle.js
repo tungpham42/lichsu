@@ -283,7 +283,7 @@ const WordPuzzle = () => {
       />
 
       <div className="mt-4 col-lg-6 col-md-8 col-sm-10 col-xs-12 mx-auto shadow-lg p-4 rounded">
-        <h4>Danh sách người chơi</h4>
+        <h4 className="text-center mb-3">Danh sách người chơi</h4>
         <Form onSubmit={(e) => e.preventDefault()} className="mb-3 mx-auto">
           <Row>
             <Col>
