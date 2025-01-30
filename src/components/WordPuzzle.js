@@ -230,14 +230,19 @@ const WordPuzzle = () => {
         <div className="text-center">
           <h3 className="text-center display-6">{getMaskedWord()}</h3>
           <h4>
-            Trò chơi kết thúc! Người chiến thắng là{" "}
-            {
-              players.reduce(
-                (prev, current) =>
-                  prev.score > current.score ? prev : current,
-                players[0]
-              )?.name
-            }
+            Trò chơi kết thúc!{" "}
+            {players.length > 0 && (
+              <>
+                Người chiến thắng là{" "}
+                {
+                  players.reduce(
+                    (prev, current) =>
+                      prev.score > current.score ? prev : current,
+                    players[0]
+                  )?.name
+                }
+              </>
+            )}
           </h4>
           <Button size="lg" onClick={restartGame}>
             <FontAwesomeIcon icon={faRedo} className="me-2" /> Chơi lại
