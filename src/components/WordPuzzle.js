@@ -29,6 +29,7 @@ const WordPuzzle = () => {
   const [message, setMessage] = useState("");
   const [letterToGuess, setLetterToGuess] = useState("");
   const [error, setError] = useState("");
+  const [hasScore, setHasScore] = useState(false);
 
   // Player management
   const [players, setPlayers] = useState([]);
@@ -65,12 +66,15 @@ const WordPuzzle = () => {
         )
       );
       setMessage(`${currentPlayer.name} mất điểm!`);
+      setHasScore(false);
     } else if (result.label === "Mất lượt") {
       setMessage(`${currentPlayer.name} mất lượt!`);
       nextPlayer();
+      setHasScore(false);
     } else {
       setLetterToGuess(result.value);
       setMessage(`${currentPlayer.name} quay được ${result.label} điểm!`);
+      setHasScore(true);
     }
 
     setShowModal(true);
@@ -89,7 +93,8 @@ const WordPuzzle = () => {
 
       const isCorrectGuess = word.includes(letter);
       const letterCount = word.split("").filter((l) => l === letter).length;
-      const scoreIncrement = isCorrectGuess ? letterCount * letterToGuess : 0;
+      const scoreIncrement =
+        isCorrectGuess && hasScore ? letterCount * letterToGuess : 0;
 
       setPlayers((prev) =>
         prev.map((player, index) =>
@@ -136,6 +141,7 @@ const WordPuzzle = () => {
     setPlayers((prev) => prev.map((player) => ({ ...player, score: 0 })));
     setCurrentPlayerIndex(0);
     setError("");
+    setHasScore(true);
   };
 
   const addPlayer = () => {
@@ -191,7 +197,9 @@ const WordPuzzle = () => {
               )?.name
             }
           </h4>
-          <Button onClick={restartGame}>Chơi lại</Button>
+          <Button size="lg" onClick={restartGame}>
+            Chơi lại
+          </Button>
         </div>
       ) : (
         <>
@@ -224,6 +232,7 @@ const WordPuzzle = () => {
         onSubmit={handleGuessLetter}
         letterToGuess={letterToGuess}
         guessedLetters={guessedLetters}
+        currentPlayer={players[currentPlayerIndex]?.name}
       />
 
       <div className="mt-4 col-8 mx-auto">
