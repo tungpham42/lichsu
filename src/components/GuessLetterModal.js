@@ -7,7 +7,7 @@ const GuessLetterModal = ({
   onSubmit,
   letterToGuess,
   guessedLetters,
-  currentPlayer,
+  currentPlayerName,
 }) => {
   const [letter, setLetter] = useState("");
   const [error, setError] = useState("");
@@ -40,7 +40,7 @@ const GuessLetterModal = ({
   return (
     <Modal show={show} onHide={onClose} backdrop="static">
       <Modal.Header>
-        <Modal.Title>Nhập chữ cái {currentPlayer} muốn đoán</Modal.Title>
+        <Modal.Title>Nhập chữ cái {currentPlayerName} muốn đoán</Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <Form.Control

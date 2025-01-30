@@ -232,7 +232,7 @@ const WordPuzzle = () => {
         onSubmit={handleGuessLetter}
         letterToGuess={letterToGuess}
         guessedLetters={guessedLetters}
-        currentPlayer={players[currentPlayerIndex]?.name}
+        currentPlayerName={players[currentPlayerIndex]?.name}
       />
 
       <div className="mt-4 col-8 mx-auto">
