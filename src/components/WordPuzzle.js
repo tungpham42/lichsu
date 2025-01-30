@@ -310,13 +310,13 @@ const WordPuzzle = () => {
         </Form>
         {error && <p className="text-danger">{error}</p>}
 
-        <ul className="list-group">
+        <ul className="list-group list-group-numbered">
           {players.map((player, index) => (
             <li
               key={index}
               className="ps-0 list-group-item d-flex justify-content gap-3 align-items-center"
             >
-              <span>
+              <span className="d-block w-75 text-break">
                 {player.name} - Điểm: {player.score}
               </span>
               <div className="position-absolute end-0 d-flex justify-content gap-2 py-2">
