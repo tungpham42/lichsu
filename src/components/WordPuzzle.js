@@ -67,17 +67,18 @@ const WordPuzzle = () => {
       );
       setMessage(`${currentPlayer.name} mất điểm!`);
       setHasScore(false);
+      setShowModal(true);
     } else if (result.label === "Mất lượt") {
       setMessage(`${currentPlayer.name} mất lượt!`);
       nextPlayer();
       setHasScore(false);
+      setShowModal(false);
     } else {
       setLetterToGuess(result.value);
       setMessage(`${currentPlayer.name} quay được ${result.label} điểm!`);
       setHasScore(true);
+      setShowModal(true);
     }
-
-    setShowModal(true);
   };
 
   const handleGuessLetter = (letter) => {
@@ -106,7 +107,7 @@ const WordPuzzle = () => {
 
       setMessage(
         isCorrectGuess
-          ? `Chúc mừng! ${currentPlayer.name} đoán đúng chữ "${letter}".`
+          ? `Chúc mừng! ${currentPlayer.name} đoán đúng chữ "${letter}", đã xuất hiện ${letterCount} lần.`
           : `${currentPlayer.name} đoán sai.`
       );
 
@@ -219,7 +220,7 @@ const WordPuzzle = () => {
           </Row>
 
           <div className="mt-3 text-center">
-            <h4>Lượt chơi của: {players[currentPlayerIndex]?.name}</h4>
+            <h4>Lượt chơi của {players[currentPlayerIndex]?.name}</h4>
             <h5>Điểm: {players[currentPlayerIndex]?.score}</h5>
           </div>
           {message && <p className="text-center mt-3 lead">{message}</p>}
