@@ -19,7 +19,7 @@ const wheelItems = [
   { label: "Mất lượt", value: 0, color: "#C0C0C0" },
 ];
 
-const WheelOfFortune = () => {
+const WordPuzzle = () => {
   const wordIndex = Math.floor(Math.random() * gameWords.length);
   const [word, setWord] = useState(gameWords[wordIndex].word);
   const [clue, setClue] = useState(gameWords[wordIndex].clue);
@@ -51,14 +51,13 @@ const WheelOfFortune = () => {
     } // eslint-disable-next-line
   }, [guessedLetters]);
 
-  const handleSpinResult = (result) => {
+  const spinWheel = () => {
     if (players.length === 0) {
-      setMessage("Lỗi: Không có người chơi!");
+      setMessage("Vui lòng thêm ít nhất một người chơi trước khi bắt đầu!");
       return;
     }
-
+    const result = wheelItems[Math.floor(Math.random() * wheelItems.length)];
     const currentPlayer = players[currentPlayerIndex];
-
     if (result.label === "Mất điểm") {
       setPlayers((prev) =>
         prev.map((player, index) =>
@@ -77,19 +76,9 @@ const WheelOfFortune = () => {
     setShowModal(true);
   };
 
-  const spinWheel = () => {
-    if (players.length === 0) {
-      setMessage("Vui lòng thêm ít nhất một người chơi trước khi bắt đầu!");
-      return;
-    }
-
-    const result = wheelItems[Math.floor(Math.random() * wheelItems.length)];
-    handleSpinResult(result);
-  };
-
   const handleGuessLetter = (letter) => {
     if (players.length === 0) {
-      setMessage("Lỗi: Không có người chơi!");
+      setMessage("Vui lòng thêm ít nhất một người chơi trước khi đoán từ!");
       return;
     }
 
@@ -188,7 +177,7 @@ const WheelOfFortune = () => {
 
   return (
     <>
-      <h1 className="text-center mb-4">Chiếc Nón Kỳ Diệu</h1>
+      <h1 className="text-center mb-4">Ô Chữ</h1>
       {gameOver ? (
         <div className="text-center">
           <h3 className="text-center display-6">{getMaskedWord()}</h3>
@@ -216,7 +205,7 @@ const WheelOfFortune = () => {
           <Row className="justify-content-center mt-3">
             <Col xs="auto">
               <Button size="lg" onClick={spinWheel}>
-                Quay Nón
+                Bắt đầu
               </Button>
             </Col>
           </Row>
@@ -300,4 +289,4 @@ const WheelOfFortune = () => {
   );
 };
 
-export default WheelOfFortune;
+export default WordPuzzle;

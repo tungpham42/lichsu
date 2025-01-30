@@ -10,7 +10,7 @@ import Home from "./components/Home";
 import HistoryLessons from "./components/HistoryLessons";
 import Quiz from "./components/Quiz";
 import Timeline from "./components/Timeline";
-import WheelOfFortune from "./components/WheelOfFortune";
+import WordPuzzle from "./components/WordPuzzle";
 import Survey from "./components/Survey";
 
 // Utility component to handle dynamic title and meta tag updates
@@ -70,11 +70,11 @@ const App = () => {
             }
           />
           <Route
-            path="/chiec-non-ky-dieu"
+            path="/o-chu"
             element={
               <>
                 <DynamicTitle title="Chiếc nón kỳ diệu - Lịch sử Việt Nam" />
-                <WheelOfFortune />
+                <WordPuzzle />
               </>
             }
           />

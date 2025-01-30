@@ -42,11 +42,11 @@ const Header = () => {
           <Nav.Link
             as={Link}
             className={
-              location.pathname === "/chiec-non-ky-dieu" ? "active" : ""
+              location.pathname === "/o-chu" ? "active" : ""
             }
-            to="/chiec-non-ky-dieu"
+            to="/o-chu"
           >
-            Chiếc Nón Kỳ Diệu
+            Ô Chữ
           </Nav.Link>
           <Nav.Link
             as={Link}
