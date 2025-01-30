@@ -79,6 +79,15 @@ const App = () => {
             }
           />
           <Route
+            path="/chiec-non-ky-dieu"
+            element={
+              <>
+                <DynamicTitle title="Chiếc Nón Kỳ Diệu - Lịch sử Việt Nam" />
+                <WordPuzzle />
+              </>
+            }
+          />
+          <Route
             path="/cau-do"
             element={
               <>

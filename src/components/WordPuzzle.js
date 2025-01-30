@@ -32,7 +32,16 @@ const WordPuzzle = () => {
   const [hasScore, setHasScore] = useState(false);
 
   // Player management
-  const [players, setPlayers] = useState([]);
+  const [players, setPlayers] = useState([
+    {
+      name: "Người chơi 1",
+      score: 0,
+    },
+    {
+      name: "Người chơi 2",
+      score: 0,
+    },
+  ]);
   const [showEditModal, setShowEditModal] = useState(false);
   const [selectedPlayerIndex, setSelectedPlayerIndex] = useState(null);
   const [newPlayerName, setNewPlayerName] = useState("");
@@ -221,7 +230,10 @@ const WordPuzzle = () => {
 
           <div className="mt-3 text-center">
             <h4>Lượt chơi của {players[currentPlayerIndex]?.name}</h4>
-            <h5>Điểm: {players[currentPlayerIndex]?.score}</h5>
+            <h5>
+              Số điểm của {players[currentPlayerIndex]?.name}:{" "}
+              {players[currentPlayerIndex]?.score}
+            </h5>
           </div>
           {message && <p className="text-center mt-3 lead">{message}</p>}
         </>
