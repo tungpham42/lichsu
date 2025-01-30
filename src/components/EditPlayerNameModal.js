@@ -3,22 +3,43 @@ import { Modal, Button, Form } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes, faSave } from "@fortawesome/free-solid-svg-icons";
 
-const EditPlayerNameModal = ({ show, onClose, currentName, onSubmit }) => {
+const EditPlayerNameModal = ({
+  show,
+  onClose,
+  currentName,
+  onSubmit,
+  players,
+}) => {
   const [newName, setNewName] = useState(currentName);
   const [error, setError] = useState("");
 
   // Update newName whenever currentName changes
   useEffect(() => {
     setNewName(currentName);
+    setError(""); // Reset error when modal opens
   }, [currentName]);
 
   const handleSubmit = () => {
-    if (newName.trim()) {
-      onSubmit(newName);
-      setError(""); // Reset the error message
-    } else {
+    const trimmedName = newName.trim();
+
+    if (!trimmedName) {
       setError("Vui lòng nhập tên mới");
+      return;
     }
+
+    if (
+      players.some(
+        (player) =>
+          player.name.toLowerCase() === trimmedName.toLowerCase() &&
+          player.name.toLowerCase() !== currentName.toLowerCase()
+      )
+    ) {
+      setError("Tên người chơi đã tồn tại!");
+      return;
+    }
+
+    onSubmit(trimmedName);
+    setError("");
   };
 
   const handleKeyDown = (e) => {

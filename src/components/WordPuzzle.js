@@ -168,7 +168,14 @@ const WordPuzzle = () => {
       setError("Tên người chơi không thể để trống!");
       return;
     }
-
+    if (
+      players.some(
+        (player) => player.name.toLowerCase() === trimmedName.toLowerCase()
+      )
+    ) {
+      setError("Tên người chơi đã tồn tại!");
+      return;
+    }
     setPlayers((prev) => [...prev, { name: trimmedName, score: 0 }]);
     setNewPlayerName("");
     setError("");
@@ -342,6 +349,7 @@ const WordPuzzle = () => {
           updatePlayerName(selectedPlayerIndex, newName);
           setShowEditModal(false);
         }}
+        players={players}
       />
     </>
   );
