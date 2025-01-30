@@ -253,14 +253,15 @@ const WordPuzzle = () => {
               </Button>
             </Col>
           </Row>
-
-          <div className="mt-3 text-center">
-            <h4>Lượt chơi của {players[currentPlayerIndex]?.name}</h4>
-            <h5>
-              Số điểm của {players[currentPlayerIndex]?.name}:{" "}
-              {players[currentPlayerIndex]?.score}
-            </h5>
-          </div>
+          {players.length > 0 && (
+            <div className="mt-3 text-center">
+              <h4>Lượt chơi của {players[currentPlayerIndex]?.name}</h4>
+              <h5>
+                Số điểm của {players[currentPlayerIndex]?.name}:{" "}
+                {players[currentPlayerIndex]?.score}
+              </h5>
+            </div>
+          )}
           {message && <p className="text-center mt-3 lead">{message}</p>}
         </>
       )}
