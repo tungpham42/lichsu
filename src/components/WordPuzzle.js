@@ -168,8 +168,8 @@ const WordPuzzle = () => {
       setError("Tên người chơi không thể để trống!");
       return;
     }
-    if (trimmedName.length > 25) {
-      setError("Tên người chơi không được vượt quá 25 ký tự!");
+    if (trimmedName.length > 20) {
+      setError("Tên người chơi không được vượt quá 20 ký tự!");
       return;
     }
     if (
@@ -306,7 +306,7 @@ const WordPuzzle = () => {
                 value={newPlayerName}
                 onChange={(e) => setNewPlayerName(e.target.value)}
                 onKeyDown={handleKeyDown}
-                maxLength="25"
+                maxLength="20"
               />
             </Col>
             <Col xl={2} lg={2} md={2} sm={4} xs={12} className="mt-2 mt-sm-0">
