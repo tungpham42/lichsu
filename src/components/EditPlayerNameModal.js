@@ -63,6 +63,7 @@ const EditPlayerNameModal = ({
           onChange={(e) => setNewName(e.target.value)}
           onKeyDown={handleKeyDown}
           placeholder="Nhập tên mới"
+          maxLength="25"
           autoFocus
         />
         {error && <p className="text-danger mt-2">{error}</p>}

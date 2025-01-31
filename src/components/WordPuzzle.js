@@ -303,6 +303,7 @@ const WordPuzzle = () => {
                 value={newPlayerName}
                 onChange={(e) => setNewPlayerName(e.target.value)}
                 onKeyDown={handleKeyDown}
+                maxLength="25"
               />
             </Col>
             <Col xl={2} lg={2} md={2} sm={4} xs={12} className="mt-2 mt-sm-0">
