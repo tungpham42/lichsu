@@ -26,7 +26,10 @@ const EditPlayerNameModal = ({
       setError("Vui lòng nhập tên mới");
       return;
     }
-
+    if (trimmedName.length > 25) {
+      setError("Tên người chơi không được vượt quá 25 ký tự!");
+      return;
+    }
     if (
       players.some(
         (player) =>

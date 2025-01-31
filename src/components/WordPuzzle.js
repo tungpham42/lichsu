@@ -168,6 +168,10 @@ const WordPuzzle = () => {
       setError("Tên người chơi không thể để trống!");
       return;
     }
+    if (trimmedName.length > 25) {
+      setError("Tên người chơi không được vượt quá 25 ký tự!");
+      return;
+    }
     if (
       players.some(
         (player) => player.name.toLowerCase() === trimmedName.toLowerCase()
