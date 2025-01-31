@@ -323,7 +323,7 @@ const WordPuzzle = () => {
         </Form>
         {error && <p className="text-danger">{error}</p>}
 
-        <ul className="list-group list-group-numbered">
+        <ul className="list-group">
           {players.map((player, index) => (
             <li
               key={index}
