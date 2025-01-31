@@ -182,6 +182,7 @@ const WordPuzzle = () => {
     }
     setPlayers((prev) => [...prev, { name: trimmedName, score: 0 }]);
     setNewPlayerName("");
+    setMessage("");
     setError("");
   };
 
@@ -206,6 +207,7 @@ const WordPuzzle = () => {
 
       return newPlayers;
     });
+    setMessage("");
   };
 
   const updatePlayerName = (index, newName) => {
@@ -214,6 +216,7 @@ const WordPuzzle = () => {
         i === index ? { ...player, name: newName } : player
       )
     );
+    setMessage("");
   };
 
   const handleEditButtonClick = (index) => {
