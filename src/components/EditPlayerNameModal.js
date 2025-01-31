@@ -26,8 +26,8 @@ const EditPlayerNameModal = ({
       setError("Vui lòng nhập tên mới");
       return;
     }
-    if (trimmedName.length > 20) {
-      setError("Tên người chơi không được vượt quá 20 ký tự!");
+    if (trimmedName.length > 15) {
+      setError("Tên người chơi không được vượt quá 15 ký tự!");
       return;
     }
     if (
@@ -63,7 +63,7 @@ const EditPlayerNameModal = ({
           onChange={(e) => setNewName(e.target.value)}
           onKeyDown={handleKeyDown}
           placeholder="Nhập tên mới"
-          maxLength="20"
+          maxLength="15"
           autoFocus
         />
         {error && <p className="text-danger mt-2">{error}</p>}
