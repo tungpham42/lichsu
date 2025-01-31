@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Button, Row, Col, Form } from "react-bootstrap";
+import { Button, Row, Col, Form, ListGroup } from "react-bootstrap";
 import gameWords from "../data/gameWords.json";
 import GuessLetterModal from "./GuessLetterModal";
 import EditPlayerNameModal from "./EditPlayerNameModal";
@@ -323,20 +323,19 @@ const WordPuzzle = () => {
         </Form>
         {error && <p className="text-danger">{error}</p>}
 
-        <ul className="list-group">
+        <ListGroup>
           {players.map((player, index) => (
-            <li
+            <ListGroup.Item
               key={index}
-              className="ps-0 list-group-item d-flex justify-content gap-3 align-items-center"
+              className="ps-0 d-flex justify-content-between align-items-center"
             >
-              <span className="d-block w-75 text-break">
+              <span className="text-break w-75">
                 {player.name} - Điểm: {player.score}
               </span>
-              <div className="position-absolute end-0 d-flex justify-content gap-2 py-2">
+              <div className="d-flex gap-2">
                 <Button
                   size="sm"
                   variant="warning"
-                  className="me-0 my-2"
                   onClick={() => handleEditButtonClick(index)}
                 >
                   <FontAwesomeIcon icon={faEdit} />
@@ -344,15 +343,14 @@ const WordPuzzle = () => {
                 <Button
                   size="sm"
                   variant="danger"
-                  className="me-2 my-2"
                   onClick={() => removePlayer(index)}
                 >
                   <FontAwesomeIcon icon={faTrash} />
                 </Button>
               </div>
-            </li>
+            </ListGroup.Item>
           ))}
-        </ul>
+        </ListGroup>
       </div>
       <EditPlayerNameModal
         show={showEditModal}
