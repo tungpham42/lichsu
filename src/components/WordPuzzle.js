@@ -124,7 +124,7 @@ const WordPuzzle = () => {
 
       setMessage(
         isCorrectGuess
-          ? `Chúc mừng! ${currentPlayer.name} đoán đúng chữ "${letter}", chữ này đã xuất hiện ${letterCount} lần.`
+          ? `Chúc mừng! ${currentPlayer.name} đã đoán đúng chữ ${letter}, có ${letterCount} chữ ${letter}.`
           : `${currentPlayer.name} đoán sai. Đổi lượt!`
       );
 
