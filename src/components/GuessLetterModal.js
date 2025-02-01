@@ -10,6 +10,7 @@ const GuessLetterModal = ({
   letterToGuess,
   guessedLetters,
   currentPlayerName,
+  message,
 }) => {
   const [letter, setLetter] = useState("");
   const [error, setError] = useState("");
@@ -45,7 +46,9 @@ const GuessLetterModal = ({
   return (
     <Modal show={show} onHide={onClose} backdrop="static" centered>
       <Modal.Header>
-        <Modal.Title>Nhập một chữ cái {currentPlayerName} muốn đoán</Modal.Title>
+        <Modal.Title>
+          Nhập một chữ cái {currentPlayerName} muốn đoán
+        </Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <Form.Control
@@ -56,6 +59,7 @@ const GuessLetterModal = ({
           maxLength="1"
           autoFocus
         />
+        {message && <p className="mt-2">{message}</p>}
         {error && <p className="text-danger mt-2">{error}</p>}
       </Modal.Body>
       <Modal.Footer>

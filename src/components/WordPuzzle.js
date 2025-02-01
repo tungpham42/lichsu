@@ -292,6 +292,7 @@ const WordPuzzle = () => {
         letterToGuess={letterToGuess}
         guessedLetters={guessedLetters}
         currentPlayerName={players[currentPlayerIndex]?.name}
+        message={message}
       />
 
       <div className="mt-4 col-lg-6 col-md-8 col-sm-10 col-xs-12 mx-auto shadow-lg p-4 rounded">
