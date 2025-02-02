@@ -7,7 +7,7 @@ const Home = () => {
       <h1 className="mb-4 text-center">Chào mừng đến với Lịch Sử Việt Nam</h1>
       <Row>
         <Col>
-          <Card className="shadow-lg">
+          <Card className="shadow-lg p-4 bg-white rounded">
             <Card.Body>
               <Card.Text>
                 <blockquote className="blockquote">
