@@ -1,5 +1,10 @@
 import React, { useEffect } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useLocation,
+} from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./components/Home";
 import HistoryLessons from "./components/HistoryLessons";
@@ -9,11 +14,14 @@ import WordPuzzle from "./components/WordPuzzle";
 import Survey from "./components/Survey";
 
 // Utility component to update title and meta tags dynamically
-const DynamicTitle = ({ title }) => {
+const DynamicMeta = ({ title }) => {
+  const location = useLocation();
+
   useEffect(() => {
+    // Update document title
     document.title = title;
 
-    // Update or create the og:title meta tag
+    // Update or create og:title
     let metaOgTitle = document.querySelector("meta[property='og:title']");
     if (!metaOgTitle) {
       metaOgTitle = document.createElement("meta");
@@ -21,7 +29,17 @@ const DynamicTitle = ({ title }) => {
       document.head.appendChild(metaOgTitle);
     }
     metaOgTitle.setAttribute("content", title);
-  }, [title]);
+
+    // Update or create og:url
+    const currentUrl = `${window.location.origin}${location.pathname}`;
+    let metaOgUrl = document.querySelector("meta[property='og:url']");
+    if (!metaOgUrl) {
+      metaOgUrl = document.createElement("meta");
+      metaOgUrl.setAttribute("property", "og:url");
+      document.head.appendChild(metaOgUrl);
+    }
+    metaOgUrl.setAttribute("content", currentUrl);
+  }, [title, location]);
 
   return null;
 };
@@ -68,7 +86,7 @@ const App = () => {
               path={path}
               element={
                 <>
-                  <DynamicTitle title={title} />
+                  <DynamicMeta title={title} />
                   {element}
                 </>
               }
