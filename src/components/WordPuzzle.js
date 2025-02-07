@@ -10,6 +10,7 @@ import {
   faRedo,
   faPlay,
   faAdd,
+  faGamepad,
 } from "@fortawesome/free-solid-svg-icons";
 
 const prizes = [
@@ -149,10 +150,17 @@ const WordPuzzle = () => {
       );
       return;
     }
+    if (gameWords.length === 0) {
+      setError("Không có ô chữ!");
+      return;
+    }
+    let newIndex;
+    do {
+      newIndex = Math.floor(Math.random() * gameWords.length);
+    } while (gameWords[newIndex].word === word); // Avoid duplicate word
 
-    const randomWord = gameWords[Math.floor(Math.random() * gameWords.length)];
-    setWord(randomWord.word);
-    setClue(randomWord.clue);
+    setWord(gameWords[newIndex].word);
+    setClue(gameWords[newIndex].clue);
     setGuessedLetters([]);
     setGameOver(false);
     setMessage("");
@@ -237,17 +245,18 @@ const WordPuzzle = () => {
         <div className="text-center">
           <h3 className="text-center display-6">{getMaskedWord()}</h3>
           <h4>
-            Trò chơi kết thúc!{" "}
+            Trò chơi kết thúc
             {players.length > 0 && (
               <>
-                Người chiến thắng là{" "}
+                ,{" "}
                 {
                   players.reduce(
                     (prev, current) =>
                       prev.score > current.score ? prev : current,
                     players[0]
                   )?.name
-                }
+                }{" "}
+                giành chiến thắng!
               </>
             )}
           </h4>
@@ -266,9 +275,12 @@ const WordPuzzle = () => {
 
           <Row className="justify-content-center mt-3">
             <Col xs="auto">
-              <Button size="lg" onClick={startGame}>
+              <Button size="lg" onClick={startGame} className="me-2">
                 <FontAwesomeIcon icon={faPlay} className="me-2" />
                 Bắt đầu
+              </Button>
+              <Button size="lg" variant="light" onClick={restartGame}>
+                <FontAwesomeIcon icon={faGamepad} className="me-2" /> Ván mới
               </Button>
             </Col>
           </Row>
