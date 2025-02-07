@@ -12,6 +12,7 @@ import Quiz from "./components/Quiz";
 import Timeline from "./components/Timeline";
 import WordPuzzle from "./components/WordPuzzle";
 import Survey from "./components/Survey";
+import SearchResults from "./components/SearchResults";
 
 // Utility component to update title and meta tags dynamically
 const DynamicMeta = ({ title }) => {
@@ -72,6 +73,11 @@ const routes = [
     path: "/khao-sat",
     title: "Khảo Sát - Lịch sử Việt Nam",
     element: <Survey />,
+  },
+  {
+    path: "tim-kiem",
+    title: "Kết Quả Tìm Kiếm - Lịch sử Việt Nam",
+    element: <SearchResults />,
   },
 ];
 

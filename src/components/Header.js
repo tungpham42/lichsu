@@ -1,9 +1,20 @@
-import React from "react";
-import { Navbar, Nav } from "react-bootstrap";
-import { Link, useLocation } from "react-router-dom";
+import React, { useState } from "react";
+import { Navbar, Nav, Form, FormControl, Button } from "react-bootstrap";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
+  const navigate = useNavigate();
   const location = useLocation();
+  const [search, setSearch] = useState("");
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if (search.trim()) {
+      navigate(`/tim-kiem?tu-khoa=${encodeURIComponent(search)}`);
+    }
+  };
 
   return (
     <Navbar
@@ -41,9 +52,7 @@ const Header = () => {
           </Nav.Link>
           <Nav.Link
             as={Link}
-            className={
-              location.pathname === "/o-chu" ? "active" : ""
-            }
+            className={location.pathname === "/o-chu" ? "active" : ""}
             to="/o-chu"
           >
             Ô Chữ
@@ -63,6 +72,18 @@ const Header = () => {
             Khảo Sát
           </Nav.Link>
         </Nav>
+        <Form className="d-flex me-2" onSubmit={handleSearch}>
+          <FormControl
+            type="search"
+            placeholder="Điền từ khóa..."
+            className="me-2"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
+          <Button type="submit" variant="outline-light">
+            <FontAwesomeIcon icon={faSearch} />
+          </Button>
+        </Form>
       </Navbar.Collapse>
     </Navbar>
   );
