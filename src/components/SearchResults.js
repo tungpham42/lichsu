@@ -37,11 +37,24 @@ const SearchResults = () => {
       const lowerQuery = query.toLowerCase();
       setFilteredLessons(
         lessons.filter(
-          ({ title, description, period, content }) =>
+          ({
+            title,
+            description,
+            period,
+            content,
+            events,
+            important_figures,
+          }) =>
             title.toLowerCase().includes(lowerQuery) ||
             description.toLowerCase().includes(lowerQuery) ||
             period.toLowerCase().includes(lowerQuery) ||
-            content.toLowerCase().includes(lowerQuery)
+            content.toLowerCase().includes(lowerQuery) ||
+            events.some((event) => event.toLowerCase().includes(lowerQuery)) ||
+            important_figures.some(
+              ({ name, role }) =>
+                name.toLowerCase().includes(lowerQuery) ||
+                role.toLowerCase().includes(lowerQuery)
+            )
         )
       );
     } else {
@@ -85,6 +98,12 @@ const SearchResults = () => {
                 className="mb-4"
               >
                 <Card className="d-flex flex-column h-100 shadow-lg">
+                  <Card.Img
+                    variant="top"
+                    src={`/images/${lesson.id}.webp`}
+                    alt={lesson.title}
+                    style={{ height: "210px", width: "auto" }}
+                  />
                   <Card.Body className="d-flex flex-column">
                     <Card.Title>{lesson.title}</Card.Title>
                     <Card.Text>{lesson.description}</Card.Text>
