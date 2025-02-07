@@ -29,10 +29,10 @@ function HistoryLessons() {
         {lessons.map((lesson) => (
           <Col key={lesson.id} xl={4} lg={4} md={6} sm={12} className="mb-4">
             <Card className="d-flex flex-column h-100 shadow-lg">
-              <Card.Body>
+              <Card.Body className="d-flex flex-column">
                 <Card.Title>{lesson.title}</Card.Title>
                 <Card.Text>{lesson.description}</Card.Text>
-                <div className="d-flex justify-content gap-3">
+                <div className="mt-auto d-flex justify-content-start gap-3">
                   <Button
                     variant="primary"
                     onClick={() => handleLessonShow(lesson)}
