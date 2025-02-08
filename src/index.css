@@ -19,7 +19,9 @@ h6,
 .h6 {
   font-family: "Crimson Pro", serif !important;
 }
-
+.masked-word {
+  font-family: "Sono", monospace !important;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;

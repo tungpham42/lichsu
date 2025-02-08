@@ -12,6 +12,13 @@ import {
   faAdd,
   faGamepad,
 } from "@fortawesome/free-solid-svg-icons";
+import useSound from "use-sound";
+import correctSound from "../sounds/correct.mp3";
+import wrongSound from "../sounds/wrong.mp3";
+import startSound from "../sounds/start.mp3";
+import winSound from "../sounds/win.mp3";
+import buzzSound from "../sounds/buzz.mp3";
+import zeroSound from "../sounds/zero.mp3";
 
 const prizes = [
   { label: "100", value: 100, color: "#FF5733" },
@@ -56,6 +63,13 @@ const WordPuzzle = () => {
   const [newPlayerName, setNewPlayerName] = useState("");
   const [currentPlayerIndex, setCurrentPlayerIndex] = useState(0);
 
+  const [playCorrect] = useSound(correctSound);
+  const [playWrong] = useSound(wrongSound);
+  const [playStart] = useSound(startSound);
+  const [playWin] = useSound(winSound);
+  const [playBuzz] = useSound(buzzSound);
+  const [playZero] = useSound(zeroSound);
+
   const getMaskedWord = () => {
     return word
       .split("")
@@ -67,6 +81,7 @@ const WordPuzzle = () => {
     if (!getMaskedWord().includes("_")) {
       setGameOver(true);
       setMessage("Chúc mừng! Từ đã được đoán xong!");
+      playWin();
     } // eslint-disable-next-line
   }, [guessedLetters]);
 
@@ -86,16 +101,19 @@ const WordPuzzle = () => {
       setMessage(`${currentPlayer.name} mất điểm!`);
       setHasScore(false);
       setShowModal(true);
+      playZero();
     } else if (result.label === "Mất lượt") {
       setMessage(`${currentPlayer.name} mất lượt!`);
       nextPlayer();
       setHasScore(false);
       setShowModal(false);
+      playBuzz();
     } else {
       setLetterToGuess(result.value);
-      setMessage(`${currentPlayer.name} quay được ${result.label} điểm!`);
+      setMessage(`${currentPlayer.name} được ${result.label} điểm!`);
       setHasScore(true);
       setShowModal(true);
+      playStart();
     }
   };
 
@@ -129,7 +147,10 @@ const WordPuzzle = () => {
           : `${currentPlayer.name} đoán sai. Đổi lượt!`
       );
 
-      if (!isCorrectGuess) {
+      if (isCorrectGuess) {
+        playCorrect();
+      } else {
+        playWrong();
         nextPlayer();
       }
     } else {
@@ -243,7 +264,9 @@ const WordPuzzle = () => {
       <h1 className="text-center mb-4">Ô Chữ</h1>
       {gameOver ? (
         <div className="text-center">
-          <h3 className="text-center display-6">{getMaskedWord()}</h3>
+          <h3 className="text-center display-6 masked-word">
+            {getMaskedWord()}
+          </h3>
           <h4>
             Trò chơi kết thúc
             {players.length > 0 && (
@@ -269,7 +292,9 @@ const WordPuzzle = () => {
           <Row className="justify-content-center">
             <Col xs="auto">
               <h5>Gợi ý: {clue}</h5>
-              <h3 className="text-center display-6">{getMaskedWord()}</h3>
+              <h3 className="text-center display-6 masked-word">
+                {getMaskedWord()}
+              </h3>
             </Col>
           </Row>
 
@@ -308,7 +333,6 @@ const WordPuzzle = () => {
       />
 
       <div className="mt-4 col-lg-6 col-md-8 col-sm-10 col-xs-12 mx-auto shadow-lg p-4 rounded">
-        <h4 className="text-center mb-3">Danh sách người chơi</h4>
         <Form onSubmit={(e) => e.preventDefault()} className="mb-3 mx-auto">
           <Row>
             <Col>
