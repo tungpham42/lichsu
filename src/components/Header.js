@@ -16,7 +16,9 @@ const Header = () => {
       setShowModal(true);
       return;
     }
-    navigate(`/tim-kiem?tu-khoa=${encodeURIComponent(search)}`);
+    navigate(
+      `/tim-kiem?tu-khoa=${encodeURIComponent(search).replace(/%20/g, "+")}`
+    );
   };
 
   return (
