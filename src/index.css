@@ -52,6 +52,9 @@ code {
   width: 100px;
   height: 100px;
 }
+.trongdong:hover {
+  animation: xoayanh 3s infinite linear;
+}
 @keyframes xoayanh {
   0% {
     transform: rotate(0deg);
