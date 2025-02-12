@@ -47,7 +47,7 @@ code {
 .trongdong {
   background: url("/public/images/trongdong_100.webp") no-repeat top left /
     cover;
-  animation: xoayanh 30s infinite linear;
+  animation: xoayanh 12s infinite linear;
   background-size: 100px 100px;
   width: 100px;
   height: 100px;
@@ -57,17 +57,28 @@ code {
     transform: rotate(0deg);
   }
   100% {
-    transform: rotate(-360deg);
+    transform: rotate(360deg);
   }
 }
 .site-title {
   color: #df382c;
-  font-weight: bold;
+  font-family: "Merriweather Sans", sans-serif !important;
+  font-weight: bolder !important;
   text-transform: uppercase;
 }
 @media all and (max-width: 768px) {
   .site-title {
     font-size: calc(1rem + 3.5vw) !important;
+  }
+}
+@media all and (max-width: 420px) {
+  .site-title {
+    float: right;
+  }
+}
+@media all and (max-width: 400px) {
+  .hero {
+    display: none;
   }
 }
 .hero {
