@@ -11,6 +11,20 @@ const Home = () => {
             <Card.Body>
               <ListGroup>
                 <ListGroupItem>
+                  <em className="h3">
+                    "Tôi muốn đi ra nước ngoài xem họ làm thế nào rồi trở về
+                    giúp đồng bào mình."
+                  </em>
+                  <span className="h4"> - Hồ Chí Minh</span>
+                </ListGroupItem>
+                <ListGroupItem>
+                  <em className="h3">
+                    "Nước ta bị mất, nhân dân ta đau khổ, tôi không thể ngồi
+                    yên."
+                  </em>
+                  <span className="h4"> - Hồ Chí Minh</span>
+                </ListGroupItem>
+                <ListGroupItem>
                   <em className="h3">"Không có gì quý hơn độc lập, tự do."</em>
                   <span className="h4"> - Hồ Chí Minh</span>
                 </ListGroupItem>
@@ -18,6 +32,13 @@ const Home = () => {
                   <em className="h3">
                     "Dân ta phải biết sử ta, cho tường gốc tích nước nhà Việt
                     Nam."
+                  </em>
+                  <span className="h4"> - Hồ Chí Minh</span>
+                </ListGroupItem>
+                <ListGroupItem>
+                  <em className="h3">
+                    "Các vua Hùng đã có công dựng nước, Bác cháu ta phải cùng
+                    nhau giữ lấy nước."
                   </em>
                   <span className="h4"> - Hồ Chí Minh</span>
                 </ListGroupItem>
