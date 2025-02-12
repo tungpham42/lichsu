@@ -9,7 +9,7 @@ const Layout = () => {
     <>
       <Header />
       <Container
-        className="my-5 pt-5"
+        className="my-5 pt-0"
         style={{ minHeight: "calc(4px - 10rem + 100vh)" }}
       >
         <Outlet /> {/* Renders child routes */}

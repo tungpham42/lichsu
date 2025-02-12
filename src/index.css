@@ -44,3 +44,35 @@ code {
 .nav-link.active {
   font-weight: 700 !important;
 }
+.trongdong {
+  background: url("/public/images/trongdong_100.webp") no-repeat top left /
+    cover;
+  animation: xoayanh 30s infinite linear;
+  background-size: 100px 100px;
+  width: 100px;
+  height: 100px;
+}
+@keyframes xoayanh {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+.site-title {
+  color: #df382c;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+@media all and (max-width: 768px) {
+  .site-title {
+    font-size: calc(1rem + 3.5vw) !important;
+  }
+}
+.hero {
+  background-color: #ffe9bc;
+  background-image: url(/public/images/header-bg.webp);
+  background-repeat: repeat;
+  background-position: center;
+}
