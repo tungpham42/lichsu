@@ -12,7 +12,15 @@ import {
 } from "react-bootstrap";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import {
+  faSearch,
+  faHome,
+  faBook,
+  faChartLine,
+  faPuzzlePiece,
+  faQuestionCircle,
+  faPoll,
+} from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -57,42 +65,44 @@ const Header = () => {
                 className={location.pathname === "/" ? "active" : ""}
                 to="/"
               >
-                Trang Chủ
+                <FontAwesomeIcon icon={faHome} className="me-2" /> Trang Chủ
               </Nav.Link>
               <Nav.Link
                 as={Link}
                 className={location.pathname === "/bai-hoc" ? "active" : ""}
                 to="/bai-hoc"
               >
-                Bài Học
+                <FontAwesomeIcon icon={faBook} className="me-2" /> Bài Học
               </Nav.Link>
               <Nav.Link
                 as={Link}
                 className={location.pathname === "/tien-trinh" ? "active" : ""}
                 to="/tien-trinh"
               >
-                Tiến Trình
+                <FontAwesomeIcon icon={faChartLine} className="me-2" /> Tiến
+                Trình
               </Nav.Link>
               <Nav.Link
                 as={Link}
                 className={location.pathname === "/o-chu" ? "active" : ""}
                 to="/o-chu"
               >
-                Ô Chữ
+                <FontAwesomeIcon icon={faPuzzlePiece} className="me-2" /> Ô Chữ
               </Nav.Link>
               <Nav.Link
                 as={Link}
                 className={location.pathname === "/cau-do" ? "active" : ""}
                 to="/cau-do"
               >
-                Câu Đố
+                <FontAwesomeIcon icon={faQuestionCircle} className="me-2" /> Câu
+                Đố
               </Nav.Link>
               <Nav.Link
                 as={Link}
                 className={location.pathname === "/khao-sat" ? "active" : ""}
                 to="/khao-sat"
               >
-                Khảo Sát
+                <FontAwesomeIcon icon={faPoll} className="me-2" /> Khảo Sát
               </Nav.Link>
             </Nav>
             <Form className="d-flex me-2" onSubmit={handleSearch}>
