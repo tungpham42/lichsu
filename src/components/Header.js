@@ -47,7 +47,7 @@ const Header = () => {
           </Row>
         </Container>
       </div>
-      <Navbar className="ps-3 shadow-lg" bg="danger" variant="dark" expand="lg">
+      <Navbar className="shadow-lg" bg="danger" variant="dark" expand="lg">
         <Container>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
