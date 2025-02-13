@@ -63,6 +63,7 @@ const GuessLetterModal = ({
       <Modal.Body>
         <Form.Control
           type="text"
+          size="lg"
           value={validateLetter(letter)}
           onChange={(e) => setLetter(e.target.value)}
           onKeyDown={handleKeyDown}
