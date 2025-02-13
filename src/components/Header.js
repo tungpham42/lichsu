@@ -50,7 +50,9 @@ const Header = () => {
               </Link>
             </Col>
             <Col md={10} sm={9} xs={9}>
-              <span className="display-2 site-title">Lịch Sử Việt Nam</span>
+              <span className="display-2 site-title flame-text">
+                Lịch Sử Việt Nam
+              </span>
             </Col>
           </Row>
         </Container>

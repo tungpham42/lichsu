@@ -64,11 +64,8 @@ code {
   }
 }
 .site-title {
-  color: #df382c;
   font-family: "Merriweather Sans", sans-serif !important;
-  font-weight: bolder !important;
   text-transform: uppercase;
-  text-shadow: 0 0 0.6rem rgba(223, 56, 44, 0.8);
 }
 @media all and (max-width: 768px) {
   .site-title {
@@ -90,4 +87,24 @@ code {
   background-image: url(/public/images/header-bg.webp);
   background-repeat: repeat;
   background-position: center;
+}
+.flame-text {
+  font-weight: 500 !important;
+  color: #ff4500; /* Base fire color */
+  text-transform: uppercase;
+  text-shadow: 0 0 0.2rem #ff4500, 0 0 0.4rem #ff6347, 0 0 0.6rem #ff0000,
+    0 0 0.8rem #ff4500, 0 0 1rem #ff6347, 0 0 1.2rem #ff0000;
+  animation: flicker 3s infinite alternate;
+}
+
+@keyframes flicker {
+  0% {
+    text-shadow: 0 0 0.2rem #ff4500, 0 0 0.4rem #ff6347, 0 0 0.6rem #ff0000;
+  }
+  50% {
+    text-shadow: 0 0 0.4rem #ff4500, 0 0 0.6rem #ff6347, 0 0 0.8rem #ff0000;
+  }
+  100% {
+    text-shadow: 0 0 0.3rem #ff4500, 0 0 0.5rem #ff6347, 0 0 0.7rem #ff0000;
+  }
 }
