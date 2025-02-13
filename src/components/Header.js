@@ -67,21 +67,21 @@ const Header = () => {
                 className={location.pathname === "/" ? "active" : ""}
                 to="/"
               >
-                <FontAwesomeIcon icon={faHome} className="me-2" /> Trang Chủ
+                <FontAwesomeIcon icon={faHome} className="me-1" /> Trang Chủ
               </Nav.Link>
               <Nav.Link
                 as={Link}
                 className={location.pathname === "/bai-hoc" ? "active" : ""}
                 to="/bai-hoc"
               >
-                <FontAwesomeIcon icon={faBook} className="me-2" /> Bài Học
+                <FontAwesomeIcon icon={faBook} className="me-1" /> Bài Học
               </Nav.Link>
               <Nav.Link
                 as={Link}
                 className={location.pathname === "/tien-trinh" ? "active" : ""}
                 to="/tien-trinh"
               >
-                <FontAwesomeIcon icon={faChartLine} className="me-2" /> Tiến
+                <FontAwesomeIcon icon={faChartLine} className="me-1" /> Tiến
                 Trình
               </Nav.Link>
               <Nav.Link
@@ -89,14 +89,14 @@ const Header = () => {
                 className={location.pathname === "/o-chu" ? "active" : ""}
                 to="/o-chu"
               >
-                <FontAwesomeIcon icon={faPuzzlePiece} className="me-2" /> Ô Chữ
+                <FontAwesomeIcon icon={faPuzzlePiece} className="me-1" /> Ô Chữ
               </Nav.Link>
               <Nav.Link
                 as={Link}
                 className={location.pathname === "/cau-do" ? "active" : ""}
                 to="/cau-do"
               >
-                <FontAwesomeIcon icon={faQuestionCircle} className="me-2" /> Câu
+                <FontAwesomeIcon icon={faQuestionCircle} className="me-1" /> Câu
                 Đố
               </Nav.Link>
               <Nav.Link
@@ -104,7 +104,7 @@ const Header = () => {
                 className={location.pathname === "/khao-sat" ? "active" : ""}
                 to="/khao-sat"
               >
-                <FontAwesomeIcon icon={faPoll} className="me-2" /> Khảo Sát
+                <FontAwesomeIcon icon={faPoll} className="me-1" /> Khảo Sát
               </Nav.Link>
             </Nav>
             <Form className="d-flex me-2" onSubmit={handleSearch}>
