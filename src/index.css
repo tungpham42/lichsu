@@ -67,6 +67,7 @@ code {
   font-family: "Cormorant Unicase", serif !important;
   text-transform: uppercase;
   font-weight: 700 !important;
+  color: #df382c;
 }
 @media all and (max-width: 768px) {
   .site-title {
@@ -90,17 +91,16 @@ code {
   background-position: center;
 }
 .flame-text {
-  color: #ff4500; /* Base fire color */
   text-transform: uppercase;
-  text-shadow: 0 0 0.2rem #ff4500, 0 0 0.4rem #ff6347, 0 0 0.6rem #ff0000;
+  text-shadow: 0 0 0.1rem #ff4500, 0 0 0.2rem #ff6347, 0 0 0.3rem #ff0000;
   animation: flicker 3s infinite alternate ease-in-out;
 }
 @keyframes flicker {
   0%,
   100% {
-    text-shadow: 0 0 0.2rem #ff4500, 0 0 0.4rem #ff6347, 0 0 0.6rem #ff0000;
+    text-shadow: 0 0 0.1rem #ff4500, 0 0 0.2rem #ff6347, 0 0 0.3rem #ff0000;
   }
   50% {
-    text-shadow: 0 0 0.4rem #ff4500, 0 0 0.6rem #ff6347, 0 0 0.8rem #ff0000;
+    text-shadow: 0 0 0.2rem #ff4500, 0 0 0.4rem #ff6347, 0 0 0.6rem #ff0000;
   }
 }
