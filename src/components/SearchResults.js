@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+import lessons from "../data/lessons.json";
 import { Row, Col, Card, Button, Modal, Alert, Spinner } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBook, faVideo, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { useLocation } from "react-router-dom";
 
 const SearchResults = () => {
-  const [lessons, setLessons] = useState([]);
   const [filteredLessons, setFilteredLessons] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -18,25 +17,11 @@ const SearchResults = () => {
     new URLSearchParams(location.search).get("tu-khoa")?.trim() || "";
 
   useEffect(() => {
-    const fetchLessons = async () => {
-      try {
-        const response = await axios.get("/data/lessons.json");
-        setLessons(response.data);
-      } catch (err) {
-        setError(err.message);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchLessons();
-  }, []);
-
-  useEffect(() => {
-    if (query && lessons.length > 0) {
-      const lowerQuery = query.toLowerCase();
-      setFilteredLessons(
-        lessons.filter(
+    try {
+      setLoading(true);
+      if (query) {
+        const lowerQuery = query.toLowerCase();
+        const filtered = lessons.filter(
           ({
             title,
             description,
@@ -55,12 +40,18 @@ const SearchResults = () => {
                 name.toLowerCase().includes(lowerQuery) ||
                 role.toLowerCase().includes(lowerQuery)
             )
-        )
-      );
-    } else {
-      setFilteredLessons([]);
+        );
+        setFilteredLessons(filtered);
+      } else {
+        setFilteredLessons([]);
+      }
+      setError(null);
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
     }
-  }, [query, lessons]);
+  }, [query]);
 
   const handleLessonShow = (lesson) => {
     setCurrentLesson(lesson);
@@ -77,7 +68,6 @@ const SearchResults = () => {
   return (
     <>
       <h1 className="text-center mb-4">Kết quả tìm kiếm cho "{query}"</h1>
-
       {loading && (
         <div className="text-center my-4">
           <Spinner animation="border" role="status">
@@ -86,7 +76,6 @@ const SearchResults = () => {
         </div>
       )}
       {error && <Alert variant="danger">{error}</Alert>}
-
       {!loading && !error && (
         <Row className="mt-3">
           {filteredLessons.length === 0 ? (
@@ -139,7 +128,6 @@ const SearchResults = () => {
           )}
         </Row>
       )}
-
       {currentLesson && (
         <Modal show={showLessonModal} onHide={handleLessonClose} size="lg">
           <Modal.Header closeButton>
@@ -175,7 +163,6 @@ const SearchResults = () => {
           </Modal.Footer>
         </Modal>
       )}
-
       {currentLesson?.youtube_id && (
         <Modal show={showVideoModal} onHide={handleVideoClose} size="lg">
           <Modal.Header closeButton>
