@@ -111,7 +111,6 @@ const Header = () => {
               <FormControl
                 type="search"
                 placeholder="Điền từ khóa..."
-                className="me-2"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
               />
