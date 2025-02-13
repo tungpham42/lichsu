@@ -27,7 +27,15 @@ function HistoryLessons() {
       <h1 className="mb-4 text-center">Bài Học Lịch Sử</h1>
       <Row>
         {lessons.map((lesson) => (
-          <Col key={lesson.id} xl={4} lg={6} md={6} sm={12} className="mb-4">
+          <Col
+            key={lesson.id}
+            xxl={4}
+            xl={4}
+            lg={6}
+            md={6}
+            sm={12}
+            className="mb-4"
+          >
             <Card className="d-flex flex-column h-100 shadow-lg">
               <Card.Img
                 variant="top"

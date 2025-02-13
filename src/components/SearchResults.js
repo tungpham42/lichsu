@@ -91,6 +91,7 @@ const SearchResults = () => {
             filteredLessons.map((lesson) => (
               <Col
                 key={lesson.id}
+                xxl={4}
                 xl={4}
                 lg={6}
                 md={6}
