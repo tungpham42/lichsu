@@ -291,7 +291,7 @@ const WordPuzzle = () => {
         <>
           <Row className="justify-content-center">
             <Col xs="auto">
-              <h3>Gợi ý: {clue}</h3>
+              <h3 className="text-center">Gợi ý: {clue}</h3>
               <h3 className="text-center display-6 masked-word">
                 {getMaskedWord()}
               </h3>
