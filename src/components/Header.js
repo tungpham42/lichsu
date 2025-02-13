@@ -114,7 +114,7 @@ const Header = () => {
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
               />
-              <Button type="submit" variant="outline-light">
+              <Button type="submit" variant="outline-light" className="ms-2">
                 <FontAwesomeIcon icon={faSearch} />
               </Button>
             </Form>
