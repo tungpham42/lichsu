@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Row, Col, Card, Button, Modal, Alert } from "react-bootstrap";
+import { Row, Col, Card, Button, Modal, Alert, Spinner } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBook, faVideo, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { useLocation } from "react-router-dom";
@@ -78,7 +78,13 @@ const SearchResults = () => {
     <>
       <h1 className="text-center mb-4">Kết quả tìm kiếm cho "{query}"</h1>
 
-      {loading && <Alert variant="info">Đang tải dữ liệu...</Alert>}
+      {loading && (
+        <div className="text-center my-4">
+          <Spinner animation="border" role="status">
+            <span className="visually-hidden">Đang tải...</span>
+          </Spinner>
+        </div>
+      )}
       {error && <Alert variant="danger">{error}</Alert>}
 
       {!loading && !error && (
