@@ -68,6 +68,7 @@ code {
   font-family: "Merriweather Sans", sans-serif !important;
   font-weight: bolder !important;
   text-transform: uppercase;
+  text-shadow: 0 0 0.6rem rgba(223, 56, 44, 0.8);
 }
 @media all and (max-width: 768px) {
   .site-title {
