@@ -92,19 +92,15 @@ code {
   font-weight: 500 !important;
   color: #ff4500; /* Base fire color */
   text-transform: uppercase;
-  text-shadow: 0 0 0.2rem #ff4500, 0 0 0.4rem #ff6347, 0 0 0.6rem #ff0000,
-    0 0 0.8rem #ff4500, 0 0 1rem #ff6347, 0 0 1.2rem #ff0000;
-  animation: flicker 3s infinite alternate;
+  text-shadow: 0 0 0.2rem #ff4500, 0 0 0.4rem #ff6347, 0 0 0.6rem #ff0000;
+  animation: flicker 3s infinite alternate ease-in-out;
 }
-
 @keyframes flicker {
-  0% {
+  0%,
+  100% {
     text-shadow: 0 0 0.2rem #ff4500, 0 0 0.4rem #ff6347, 0 0 0.6rem #ff0000;
   }
   50% {
     text-shadow: 0 0 0.4rem #ff4500, 0 0 0.6rem #ff6347, 0 0 0.8rem #ff0000;
-  }
-  100% {
-    text-shadow: 0 0 0.3rem #ff4500, 0 0 0.5rem #ff6347, 0 0 0.7rem #ff0000;
   }
 }
