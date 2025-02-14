@@ -162,7 +162,8 @@ code {
   .nav-link {
     color: rgba(255, 255, 255, 0.6) !important;
   }
-  .nav-link:hover {
+  .nav-link:hover,
+  .nav-link.active {
     color: white !important;
   }
 }
