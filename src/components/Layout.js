@@ -37,7 +37,7 @@ const Layout = () => {
         <Button
           variant="primary"
           onClick={scrollToTop}
-          className="d-flex align-items-center justify-content-center position-fixed bottom-3 end-3 rounded-circle shadow"
+          className="d-flex align-items-center justify-content-center position-fixed bottom-3 end-3 rounded-circle shadow-lg"
           style={{
             bottom: "25px",
             right: "25px",
