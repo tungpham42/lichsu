@@ -37,12 +37,10 @@ function HistoryLessons() {
             className="mb-4"
           >
             <Card className="d-flex flex-column h-100 shadow-lg">
-              <Card.Img
-                variant="top"
-                src={`/images/${lesson.id}.webp`}
-                alt={lesson.title}
-                style={{ height: "210px", width: "auto" }}
-              />
+              <div
+                className="custom-card-img rounded-top"
+                style={{ backgroundImage: `url(/images/${lesson.id}.webp)` }}
+              ></div>
               <Card.Body className="d-flex flex-column">
                 <Card.Title>{lesson.title}</Card.Title>
                 <Card.Text>{lesson.description}</Card.Text>
