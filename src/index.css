@@ -41,8 +41,9 @@ code {
   font-weight: bold;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-.nav-link.active {
-  font-weight: 400 !important;
+.nav-link {
+  font-weight: 500 !important;
+  color: white !important;
 }
 .trongdong {
   background: url("/public/images/trongdong_100.webp") no-repeat top left /
@@ -126,10 +127,6 @@ code {
   .nav-link {
     position: relative;
     padding-bottom: 5px;
-  }
-  .nav-link:hover {
-    font-weight: 400 !important;
-    color: white !important;
   }
   /* Underline effect */
   .nav-link::after {

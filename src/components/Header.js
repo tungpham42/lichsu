@@ -64,21 +64,27 @@ const Header = () => {
             <Nav className="me-auto">
               <Nav.Link
                 as={Link}
-                className={location.pathname === "/" ? "active" : ""}
+                className={`${
+                  location.pathname === "/" ? "active" : ""
+                } me-3 px-0`}
                 to="/"
               >
                 <FontAwesomeIcon icon={faHome} className="me-1" /> Trang Chủ
               </Nav.Link>
               <Nav.Link
                 as={Link}
-                className={location.pathname === "/bai-hoc" ? "active" : ""}
+                className={`${
+                  location.pathname === "/bai-hoc" ? "active" : ""
+                } me-3 px-0`}
                 to="/bai-hoc"
               >
                 <FontAwesomeIcon icon={faBook} className="me-1" /> Bài Học
               </Nav.Link>
               <Nav.Link
                 as={Link}
-                className={location.pathname === "/tien-trinh" ? "active" : ""}
+                className={`${
+                  location.pathname === "/tien-trinh" ? "active" : ""
+                } me-3 px-0`}
                 to="/tien-trinh"
               >
                 <FontAwesomeIcon icon={faChartLine} className="me-1" /> Tiến
@@ -86,14 +92,18 @@ const Header = () => {
               </Nav.Link>
               <Nav.Link
                 as={Link}
-                className={location.pathname === "/o-chu" ? "active" : ""}
+                className={`${
+                  location.pathname === "/o-chu" ? "active" : ""
+                } me-3 px-0`}
                 to="/o-chu"
               >
                 <FontAwesomeIcon icon={faPuzzlePiece} className="me-1" /> Ô Chữ
               </Nav.Link>
               <Nav.Link
                 as={Link}
-                className={location.pathname === "/cau-do" ? "active" : ""}
+                className={`${
+                  location.pathname === "/cau-do" ? "active" : ""
+                } me-3 px-0`}
                 to="/cau-do"
               >
                 <FontAwesomeIcon icon={faQuestionCircle} className="me-1" /> Câu
@@ -101,7 +111,9 @@ const Header = () => {
               </Nav.Link>
               <Nav.Link
                 as={Link}
-                className={location.pathname === "/khao-sat" ? "active" : ""}
+                className={`${
+                  location.pathname === "/khao-sat" ? "active" : ""
+                } me-3 px-0`}
                 to="/khao-sat"
               >
                 <FontAwesomeIcon icon={faPoll} className="me-1" /> Khảo Sát
