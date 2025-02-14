@@ -158,3 +158,11 @@ code {
     width: 0;
   }
 }
+@media all and (max-width: 991.99px) {
+  .nav-link {
+    color: rgba(255, 255, 255, 0.6) !important;
+  }
+  .nav-link:hover {
+    color: white !important;
+  }
+}
