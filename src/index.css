@@ -165,5 +165,6 @@ code {
   .nav-link:hover,
   .nav-link.active {
     color: white !important;
+    font-weight: 600 !important;
   }
 }
