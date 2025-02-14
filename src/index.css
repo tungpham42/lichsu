@@ -42,7 +42,7 @@ code {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 .nav-link.active {
-  font-weight: 700 !important;
+  font-weight: 400 !important;
 }
 .trongdong {
   background: url("/public/images/trongdong_100.webp") no-repeat top left /
@@ -121,4 +121,43 @@ code {
   height: 100%;
   background-size: cover;
   background-position: center;
+}
+@media all and (min-width: 992px) {
+  .nav-link {
+    position: relative;
+    padding-bottom: 5px;
+  }
+  .nav-link:hover {
+    font-weight: 400 !important;
+    color: white !important;
+  }
+  /* Underline effect */
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%);
+  }
+
+  /* Active link underline */
+  .nav-link.active::after,
+  .navbar-nav:hover .nav-link.active:hover::after {
+    width: 100%;
+  }
+
+  /* Hover effect */
+  .nav-link:hover::after {
+    width: 100%;
+    background-color: white;
+  }
+
+  /* Remove active underline when hovering on another nav-link */
+  .navbar-nav:hover .nav-link.active::after {
+    width: 0;
+  }
 }
