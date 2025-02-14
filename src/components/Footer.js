@@ -1,3 +1,5 @@
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Container } from "react-bootstrap";
 
@@ -15,6 +17,16 @@ const Footer = () => {
             rel="noreferrer"
           >
             Phạm Tùng
+          </a>
+          {", "}
+          <a
+            href="https://github.com/tungpham42/lichsu"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-light text-decoration-none"
+          >
+            <FontAwesomeIcon icon={faGithub} className="me-1" />
+            MIT License
           </a>
         </p>
       </Container>
