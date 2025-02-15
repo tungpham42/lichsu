@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Container,
   Row,
@@ -27,6 +27,22 @@ const Header = () => {
   const location = useLocation();
   const [search, setSearch] = useState("");
   const [showModal, setShowModal] = useState(false);
+  const [isFixed, setIsFixed] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 148) {
+        setIsFixed(true);
+      } else {
+        setIsFixed(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -57,7 +73,13 @@ const Header = () => {
           </Row>
         </Container>
       </div>
-      <Navbar className="shadow-lg" bg="danger" variant="dark" expand="lg">
+
+      <Navbar
+        className={`shadow-lg ${isFixed ? "fixed-navbar" : ""}`}
+        bg="danger"
+        variant="dark"
+        expand="lg"
+      >
         <Container>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
