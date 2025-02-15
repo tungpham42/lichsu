@@ -42,7 +42,7 @@ code {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 .nav-link {
-  font-weight: 500 !important;
+  font-weight: 700 !important;
   color: white !important;
 }
 .trongdong {
@@ -166,12 +166,13 @@ code {
 }
 @media all and (max-width: 991.99px) {
   .nav-link {
+    font-weight: 600 !important;
     color: rgba(255, 255, 255, 0.6) !important;
   }
   .nav-link:hover,
   .nav-link.active {
     color: white !important;
-    font-weight: 600 !important;
+    font-weight: 700 !important;
   }
   .fixed-navbar {
     position: relative !important;
