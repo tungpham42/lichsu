@@ -31,7 +31,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 148) {
+      if (window.innerWidth > 991 && window.scrollY > 148) {
         setIsFixed(true);
       } else {
         setIsFixed(false);

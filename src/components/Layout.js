@@ -13,7 +13,7 @@ const Layout = () => {
   useEffect(() => {
     const handleScroll = () => {
       setShowButton(window.scrollY > 148);
-      if (window.scrollY > 148) {
+      if (window.innerWidth > 991 && window.scrollY > 148) {
         setIsFixed(true);
       } else {
         setIsFixed(false);
