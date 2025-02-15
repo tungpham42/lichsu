@@ -11,17 +11,18 @@ const Layout = () => {
   const [isFixed, setIsFixed] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
+    const handleEvent = () => {
       setShowButton(window.scrollY > 148);
-      if (window.innerWidth > 991 && window.scrollY > 148) {
-        setIsFixed(true);
-      } else {
-        setIsFixed(false);
-      }
+      setIsFixed(window.innerWidth > 991 && window.scrollY > 148);
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleEvent);
+    window.addEventListener("resize", handleEvent);
+
+    return () => {
+      window.removeEventListener("scroll", handleEvent);
+      window.removeEventListener("resize", handleEvent);
+    };
   }, []);
 
   const scrollToTop = () => {

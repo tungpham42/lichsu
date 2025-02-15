@@ -30,17 +30,16 @@ const Header = () => {
   const [isFixed, setIsFixed] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.innerWidth > 991 && window.scrollY > 148) {
-        setIsFixed(true);
-      } else {
-        setIsFixed(false);
-      }
+    const handleEvent = () => {
+      setIsFixed(window.innerWidth > 991 && window.scrollY > 148);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleEvent);
+    window.addEventListener("resize", handleEvent);
+
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", handleEvent);
+      window.removeEventListener("resize", handleEvent);
     };
   }, []);
 
