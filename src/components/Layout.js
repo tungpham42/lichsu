@@ -8,10 +8,16 @@ import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 
 const Layout = () => {
   const [showButton, setShowButton] = useState(false);
+  const [isFixed, setIsFixed] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       setShowButton(window.scrollY > 148);
+      if (window.scrollY > 148) {
+        setIsFixed(true);
+      } else {
+        setIsFixed(false);
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -26,7 +32,7 @@ const Layout = () => {
     <>
       <Header />
       <Container
-        className="my-5 pt-0"
+        className={`my-5 ${isFixed ? "pt-5" : "pt-0"}`}
         style={{ minHeight: "calc(4px - 10rem + 100vh)" }}
       >
         <Outlet />
