@@ -4,7 +4,7 @@ import { Container, Button } from "react-bootstrap";
 import Header from "./Header";
 import Footer from "./Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
+import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 
 const Layout = () => {
   const [showButton, setShowButton] = useState(false);
@@ -46,7 +46,7 @@ const Layout = () => {
             fontSize: "20px",
           }}
         >
-          <FontAwesomeIcon icon={faArrowUp} />
+          <FontAwesomeIcon icon={faChevronUp} />
         </Button>
       )}
     </>
