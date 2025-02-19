@@ -8,7 +8,7 @@ const Survey = () => {
         <iframe
           src="https://docs.google.com/forms/d/e/1FAIpQLSetfremKqpUDkeJNcqJa6dvI403cs9Y66E7jZYO2J41HKs74A/viewform?embedded=true"
           width="100%"
-          height="700"
+          height="2700"
           frameborder="0"
           marginheight="0"
           marginwidth="0"
