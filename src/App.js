@@ -13,6 +13,7 @@ import Timeline from "./components/Timeline";
 import WordPuzzle from "./components/WordPuzzle";
 import Survey from "./components/Survey";
 import SearchResults from "./components/SearchResults";
+import { FontSizeProvider } from "./FontSizeContext";
 
 // Utility component to update title and meta tags dynamically
 const DynamicMeta = ({ title }) => {
@@ -83,24 +84,26 @@ const routes = [
 
 const App = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          {routes.map(({ path, title, element }) => (
-            <Route
-              key={path}
-              path={path}
-              element={
-                <>
-                  <DynamicMeta title={title} />
-                  {element}
-                </>
-              }
-            />
-          ))}
-        </Route>
-      </Routes>
-    </Router>
+    <FontSizeProvider>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            {routes.map(({ path, title, element }) => (
+              <Route
+                key={path}
+                path={path}
+                element={
+                  <>
+                    <DynamicMeta title={title} />
+                    {element}
+                  </>
+                }
+              />
+            ))}
+          </Route>
+        </Routes>
+      </Router>
+    </FontSizeProvider>
   );
 };
 
