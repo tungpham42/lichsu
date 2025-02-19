@@ -63,7 +63,7 @@ const Layout = () => {
       </Container>
 
       <Container
-        className={`my-5 ${isFixed ? "pt-5" : "pt-0"}`}
+        className={`my-2 ${isFixed ? "pt-5" : "pt-0"}`}
         style={{
           fontSize: `${fontSize}px`,
           minHeight: "calc(100vh - 10rem)",
